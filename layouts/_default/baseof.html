@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+
+    {{ if not (eq .Title $.Site.Title) }}
+    <title>{{ .Title }} — {{ $.Site.Title }}</title>
+    {{ else }}
+    <title>{{ $.Site.Title }}</title>
+    {{ end }}
+
+    {{ block "meta" . }}
+        <meta name="" content="">
+    {{ end }}
+
+    {{ with resources.Get "css/style.css" | resources.PostCSS  }}
+        <style>{{ .Content | safeCSS }}</style>
+    {{ end }}
+</head>
+
+<body class="font-sans flex flex-col min-h-full">
+
+{{ partial "header.html" . }}
+
+<main class="container mx-auto xs:px-4 sm:px-4 md:px-4 lg:px-0 md:mt-20 lg:mt-20">
+    {{ block "main" . }} {{ end }}
+</main>
+
+{{ partial "footer.html" . }}
+
+</body>
+</html>
