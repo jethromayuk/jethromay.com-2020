@@ -1,0 +1,20 @@
+{
+  "name": "jethromay.com",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jethromay/jethromay.com-new.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jethromay/jethromay.com-new/issues"
+  },
+  "homepage": "https://github.com/jethromay/jethromay.com-new#readme"
+}
