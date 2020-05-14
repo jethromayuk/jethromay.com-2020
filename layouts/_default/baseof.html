@@ -19,11 +19,11 @@
     {{ end }}
 </head>
 
-<body class="font-sans flex flex-col min-h-full">
+<body class="flex flex-col min-h-full">
 
 {{ partial "header.html" . }}
 
-<main class="container mx-auto xs:px-4 sm:px-4 md:px-4 lg:px-0 md:mt-20 lg:mt-20">
+<main class="flex-grow container mx-auto xs:px-4 sm:px-4 md:px-4 lg:px-0 md:mt-20 lg:mt-20">
     {{ block "main" . }} {{ end }}
 </main>
 

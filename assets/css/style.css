@@ -1,5 +1,20 @@
 @tailwind base;
+
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local("Inter"), url("/fonts/inter-regular.woff") format('woff');
+}
+
+html, body, main {
+    font-family: 'Inter', sans-serif;
+}
+
 @tailwind components;
+
+@tailwind utilities;
 
 @media screen and (min-width: 320px) and (max-width: 1023px) {
     main {
@@ -7,10 +22,8 @@
     }
 }
 
-@media (min-width: 1280px) {
+@media screen and (min-width: 1280px) {
     .container {
         max-width: 860px;
     }
 }
-
-@tailwind utilities;
