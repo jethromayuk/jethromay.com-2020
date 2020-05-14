@@ -19,10 +19,12 @@
                 <li class="lg:mr-3 lg:ml-3 lg:invisible xs:pb-1">
                     <a href="/" class="text-gray-600 hover:underline">Home</a>
                 </li>
-                {{ $currentPage := . }}
-                {{ range .Site.Menus.main }}
+                {{ $current := . }}
+                {{ range .Site.Menus.main.ByWeight }}
                     <li class="lg:mr-3 lg:ml-3 xs:py-1 sm:py-3">
-                        <a class="text-gray-600 hover:underline" href="{{ .URL }}">{{ .Name }}</a>
+                        {{ $active := or ($current.IsMenuCurrent "main" .) ($current.HasMenuCurrent "main" .) }}
+                        {{ $active = or $active (eq .Name $current.Title) }}
+                        <a href="{{ .URL }}" class="text-gray-600 hover:underline {{ if $active }} text-gray-800 {{ end }}">{{ .Name }}</a>
                     </li>
                 {{ end }}
                 <li class="lg:ml-3 xs:py-1 sm:py-3">
