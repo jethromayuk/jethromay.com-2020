@@ -21,9 +21,9 @@
                 </li>
                 {{ $currentPage := . }}
                 {{ range .Site.Menus.main }}
-                <li class="lg:mr-3 lg:ml-3 xs:py-1 sm:py-3">
-                    <a class="text-gray-600 hover:underline" href="{{ .URL }}">{{ .Name }}</a>
-                </li>
+                    <li class="lg:mr-3 lg:ml-3 xs:py-1 sm:py-3">
+                        <a class="text-gray-600 hover:underline" href="{{ .URL }}">{{ .Name }}</a>
+                    </li>
                 {{ end }}
                 <li class="lg:ml-3 xs:py-1 sm:py-3">
                     <a href='https://ko-fi.com/jethromay'
