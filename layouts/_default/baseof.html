@@ -4,11 +4,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 
-    {{ if not (eq .Title $.Site.Title) }}
-    <title>{{ .Title }} — {{ $.Site.Title }}</title>
-    {{ else }}
-    <title>{{ $.Site.Title }}</title>
-    {{ end }}
+    {{ if .IsHome -}}
+    <title>{{ .Site.Title }}</title>
+    {{- else -}}
+    <title>{{ .Title }} – {{ .Site.Title }}</title>
+    {{- end }}
 
     {{ block "meta" . }}
         <meta name="" content="">
