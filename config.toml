@@ -3,7 +3,7 @@ languageCode = "en-us"
 title = "Jethro May"
 
 [permalinks]
-  posts = "/:slug"
+  posts = "/posts/:slug"
 
 [author]
   name = "Jethro May"

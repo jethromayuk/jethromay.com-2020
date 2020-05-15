@@ -1,9 +1,12 @@
 {{ define "meta" }}
-
+<meta name="description" content="{{ .Summary | truncate 155 }}" />
 {{ end }}
 
 {{ define "main" }}
     <article>
+        <header>
+            {{ .Title }}
+        </header>
         {{ .Content }}
     </article>
 {{ end }}
