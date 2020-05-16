@@ -2,6 +2,8 @@ baseURL = "https://jethromay.com/"
 languageCode = "en-us"
 title = "Jethro May"
 
+enableGitInfo = true
+
 [permalinks]
   posts = "/posts/:slug"
 
