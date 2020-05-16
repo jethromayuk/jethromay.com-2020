@@ -10,7 +10,7 @@
                 <time>
                     {{ .Date.Format "January 2, 2006" }}
                 </time>
-                {{ .ReadingTime }}
+                {{ math.Round (div (countwords .Content) 220.0) }} minutes.
             </p>
         </header>
         {{ .Content }}

@@ -33,10 +33,10 @@
                     </time>
                 </header>
                 <p>
-                    I wanted to redesign my website and create a platform to share the knowledge I learn throughout my career.
+                    {{ .Description }}
                 </p>
                 <footer>
-                    <a class="underline text-blue-400 hover:text-blue-500" href="/posts/2020-website-refresh">Read more</a>
+                    <a class="underline text-blue-400 hover:text-blue-500" href="{{ .RelPermalink }}">Read more</a>
                 </footer>
             </article>
         {{ end }}
