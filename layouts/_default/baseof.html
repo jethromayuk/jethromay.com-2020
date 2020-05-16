@@ -20,14 +20,29 @@
 </head>
 
 <body class="flex flex-col h-screen">
-
+<a class="skip-link" href="#main">Skip to main content</a>
 {{ partial "header.html" . }}
 
-<main class="flex-grow container mx-auto xs:px-4 sm:px-4 md:px-4 lg:px-0 md:mt-20 lg:mt-20">
+<main id="main" class="flex-grow container mx-auto xs:px-4 sm:px-4 md:px-4 lg:px-0 md:mt-20 lg:mt-20">
     {{ block "main" . }} {{ end }}
 </main>
 
 {{ partial "footer.html" . }}
+
+<script>
+    !function (d, s, id) {
+        var js,
+            fjs = d.getElementsByTagName(s)[0];
+        if (!d.getElementById(id)) {
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "//platform.twitter.com/widgets.js";
+            fjs
+                .parentNode
+                .insertBefore(js, fjs);
+        }
+    }(document, "script", "twitter-wjs");
+</script>
 
 </body>
 </html>
