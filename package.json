@@ -7,16 +7,16 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
+    "alpinejs": "^2.3.5",
     "autoprefixer": "^9.7.6",
     "postcss": "^7.0.29",
     "postcss-cli": "^7.1.1",
-    "postcss-import": "^12.0.1",
     "postcss-nested": "^4.2.1",
     "tailwindcss": "^1.4.6"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Jethro May <hello@jethromay.com>",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jethromay/jethromay.com-new.git"
