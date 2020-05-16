@@ -24,7 +24,7 @@ p {
     @apply leading-relaxed text-lg
 }
 
-p:not(:last-child) {
+main p:not(:last-child) {
     @apply mb-6
 }
 
