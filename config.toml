@@ -5,7 +5,7 @@ title = "Jethro May"
 enableGitInfo = true
 
 [permalinks]
-  posts = "/posts/:slug"
+    posts = "/posts/:slug"
 
 [author]
-  name = "Jethro May"
+    name = "Jethro May"

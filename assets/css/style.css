@@ -28,10 +28,6 @@ p:not(:last-child) {
     @apply mb-6
 }
 
-li:not(:last-child) {
-    @apply mb-6
-}
-
 @tailwind components;
 
 @tailwind utilities;

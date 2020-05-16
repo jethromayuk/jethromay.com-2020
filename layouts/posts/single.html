@@ -6,9 +6,12 @@
     <article class="md:mt-20 lg:mb-20">
         <header>
             <h1 class="font-bold text-5xl mb-4">{{ .Title }}</h1>
-            <time>
-                {{ .Date.Format "January 2, 2006" }}
-            </time> | Share
+            <p>
+                <time>
+                    {{ .Date.Format "January 2, 2006" }}
+                </time>
+                {{ .ReadingTime }}
+            </p>
         </header>
         {{ .Content }}
     </article>
