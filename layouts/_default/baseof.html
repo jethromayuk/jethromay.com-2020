@@ -17,6 +17,8 @@
     {{ with resources.Get "css/style.css" | resources.PostCSS  }}
         <style>{{ .Content | safeCSS }}</style>
     {{ end }}
+
+    <link rel="alternate" type="application/rss+xml" href="/posts/index.xml" title="Jethro May: Posts" />
 </head>
 
 <body class="flex flex-col h-screen">
