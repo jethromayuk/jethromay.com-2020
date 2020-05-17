@@ -1,6 +1,7 @@
 ---
 title: "2020 Website Refresh"
 description: "I wanted to redesign my website and create a platform to share the knowledge I learn throughout my career."
+tags: [website]
 publishdate: 2020-05-10
 draft: false
 ---

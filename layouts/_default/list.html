@@ -1,0 +1,30 @@
+{{ define "main" }}
+    <section class="md:mt-20" id="posts">
+        <h1>{{ .Title }}</h1>
+        {{ .Content }}
+        {{ $paginator := .Paginate (where .Pages "Type" "posts") }}
+        {{ range $paginator.Pages }}
+        <article>
+            <header class="mb-4">
+                <h1 class="text-2xl mb-0 mr-3">
+                    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                </h1>
+                <p class="text-sm text-gray-600 mb-6">
+                    <time>
+                        {{ .PublishDate.Format "January 2, 2006" }}
+                    </time>
+                    | {{ math.Round (div (countwords .Content) 220.0) }} min read
+                </p>
+            </header>
+            <p>
+                {{ .Description }}
+            </p>
+            <footer>
+                <a class="text-lg underline text-blue-400 hover:text-blue-500" href="{{ .RelPermalink }}">Read more</a>
+            </footer>
+        </article>
+        {{ end }}
+    </section>
+
+    {{ template "_internal/pagination.html" . }}
+{{ end }}

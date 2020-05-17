@@ -4,6 +4,9 @@ title = "Jethro May"
 
 enableGitInfo = true
 
+[taxonomies]
+   tags = "tags"
+
 [permalinks]
     posts = "/posts/:slug"
 
