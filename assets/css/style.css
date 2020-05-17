@@ -28,6 +28,10 @@ main p:not(:last-child) {
     @apply mb-6
 }
 
+#posts article:not(:only-child):not(:last-child) {
+    @apply border-b-2 pb-12 mb-12
+}
+
 @tailwind components;
 
 @tailwind utilities;
