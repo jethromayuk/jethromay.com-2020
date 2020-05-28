@@ -8,9 +8,9 @@
   },
   "dependencies": {
     "alpinejs": "^2.3.5",
-    "autoprefixer": "^9.7.6",
-    "netlify-cms": "^2.10.48",
-    "postcss": "^7.0.29",
+    "autoprefixer": "^9.8.0",
+    "netlify-cms": "^2.10.49",
+    "postcss": "^7.0.31",
     "postcss-cli": "^7.1.1",
     "postcss-nested": "^4.2.1",
     "tailwindcss": "^1.4.6"
