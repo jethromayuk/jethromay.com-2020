@@ -19,7 +19,12 @@
     {{ end }}
 
     <link rel="alternate" type="application/rss+xml" href="/posts/index.xml" title="Jethro May: Posts" />
+
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.3.5/dist/alpine.min.js" defer></script>
+
+    {{ if eq (getenv "HUGO_ENV") "production" }}
+
+    {{ end }}
 </head>
 
 <body class="flex flex-col h-screen">
