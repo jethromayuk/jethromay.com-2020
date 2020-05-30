@@ -1,10 +1,11 @@
 {{ define "main"}}
     <div class="md:mt-20 lg:mb-20">
-        <h1>
+        <h1 class="text-center">
             Oops!
         </h1>
-        <p>
+        <p class="text-center">
             It looks like the page that you’re looking for does not exist, or the link is broken.
         </p>
+        <a class="" href="{{ "/" | relURL }}" role="button">Go Home</a>
     </div>
 {{ end }}
