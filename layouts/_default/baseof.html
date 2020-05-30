@@ -12,7 +12,7 @@
 
     {{ block "meta" . }}
     <meta name="description" content="{{if .IsHome}}{{ $.Site.Params.description }}{{else}}{{.Description}}{{end}}" />
-    <meta name="keywords" content="Full-stack web developer, HTML, CSS, PHP, Laravel, South Africa">
+    <meta name="keywords" content="Full-stack web developer, HTML, CSS, JS, PHP, Laravel, South Africa">
     {{ end }}
 
     {{ with resources.Get "css/style.css" | resources.PostCSS  }}
