@@ -25,7 +25,7 @@ p {
 }
 
 main p:not(:last-child) {
-    @apply mb-6
+    @apply mb-4
 }
 
 #posts article:not(:only-child):not(:last-child) {

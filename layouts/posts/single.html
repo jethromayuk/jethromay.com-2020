@@ -20,18 +20,24 @@
     <article class="md:mt-20 lg:mb-10">
         <header>
             <h1 class="font-bold text-5xl mb-0">{{ .Title }}</h1>
-            <p class="text-sm text-gray-600 mb-6">
+            <p class="text-sm text-gray-600 mb-6 mr-2">
                 Published
                 <time>{{ .Date.Format "January 2, 2006" }}</time>
                 &bull; {{ math.Round (div (countwords .Content) 220.0) }} min read
             </p>
         </header>
         {{ .Content }}
-        <p>
-            Did you enjoy the article? Follow me on <a href="https://twitter.com/may_jethro" class="text-lg underline text-blue-400 hover:text-blue-500" target="_blank" rel="noopener noreferrer">Twitter</a>
-            or <a class="text-lg underline text-blue-400 hover:text-blue-500" href="http://twitter.com/share?text={{ .Title }}&url={{ .Permalink }}" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235'); return false;">
-            share</a> it now!
-        </p>
+        <footer>
+            <h2 class="mt-8">
+                Did you enjoy this post?
+            </h2>
+            <p>
+                I would be eternally grateful if you let me know by sharing it on Twitter!
+            </p>
+            <p>
+                <a class="text-lg text-blue-400 hover:text-blue-500" href="http://twitter.com/share?text={{ .Title }} via @may_jethro&url={{ .Permalink }}" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235'); return false;">Click here to share the post</a> and follow me <a class="text-lg text-blue-400 hover:text-blue-500" href="https://twitter.com/may_jethro" target="_blank">@may_jethro</a>.
+            </p>
+        </footer>
     </article>
     {{ partial "newsletter.html" . }}
 {{ end }}
