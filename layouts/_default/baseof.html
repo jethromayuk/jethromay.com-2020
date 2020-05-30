@@ -22,13 +22,11 @@
 
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.3.5/dist/alpine.min.js" defer></script>
 
-    {{ if eq (getenv "HUGO_ENV") "production" }}
-        {{ template "_internal/google_analytics.html" . }}
-    {{ end }}
+    {{ template "_internal/google_analytics.html" . }}
 </head>
 
 <body class="flex flex-col h-screen">
-<!--<a class="skip-link" href="#main">Skip to main content</a>-->
+<a class="skip-link" href="#main">Skip to main content</a>
 {{ partial "header.html" . }}
 
 <main id="main" class="flex-grow container mx-auto xs:px-4 sm:px-4 md:px-4 lg:px-0 md:mt-20 lg:mt-20">
