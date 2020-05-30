@@ -8,7 +8,6 @@
   },
   "dependencies": {
     "autoprefixer": "^9.8.0",
-    "netlify-cms": "^2.10.49",
     "postcss": "^7.0.31",
     "postcss-cli": "^7.1.1",
     "postcss-nested": "^4.2.1",
