@@ -22,13 +22,6 @@
                 <time>{{ .Date.Format "January 2, 2006" }}</time>
                 &bull; {{ math.Round (div (countwords .Content) 220.0) }} min read
             </p>
-            <ul class="flex mb-6">
-                {{ range (.GetTerms "tags") }}
-                    <li class="text-gray-600 mr-4 underline">
-                        <a href="{{ .Permalink }}"># {{ .LinkTitle }}</a>
-                    </li>
-                {{ end }}
-            </ul>
         </header>
         {{ .Content }}
     </article>
