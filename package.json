@@ -7,7 +7,6 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "alpinejs": "^2.3.5",
     "autoprefixer": "^9.8.0",
     "netlify-cms": "^2.10.49",
     "postcss": "^7.0.31",
