@@ -24,7 +24,7 @@
     });
 
     function submitEmail(email) {
-        fetch('./functions/subscribe', {
+        fetch('/.netlify/functions/subscribe', {
             method: 'post',
             body: JSON.stringify({
                 email: email
