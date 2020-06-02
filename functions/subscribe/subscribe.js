@@ -1,103 +1,53 @@
-const queryString = require('querystring');
-const axios = require('axios');
-const mailChimpAPI = process.env.MAILCHIMP_KEY;
-const mailChimpListID = process.env.MAILCHIMP_LIST_ID;
-exports.handler = (event, context, callback) => {
-  let body = {}
-  console.log(event)
-  try {
-    body = JSON.parse(event.body)
-  } catch (e) {
-    body = queryString.parse(event.body)
-  }
+const fetch = require('node-fetch');
+const base64 = require('base-64');
 
-  if (!body.email) {
-    console.log('missing email')
-    return callback(null, {
-      statusCode: 400,
-      body: JSON.stringify({
-        error: 'missing email'
-      })
-    })
+exports.handler = async (event, context) => {
+  // Only allow POST
+  if (event.httpMethod !== 'POST') {
+    return { statusCode: 405, body: 'Method Not Allowed' };
   }
-
-  if (!mailChimpAPI) {
-    console.log('missing mailChimpAPI key')
-    return callback(null, {
-      statusCode: 400,
-      body: JSON.stringify({
-        error: 'missing mailChimpAPI key'
-      })
-    })
-  }
-
-  if (!mailChimpListID) {
-    console.log('missing mailChimpListID key')
-    return callback(null, {
-      statusCode: 400,
-      body: JSON.stringify({
-        error: 'missing mailChimpListID key'
-      })
-    })
-  }
-
-  const data = {
-    email_address: body.email,
-    status: "pending",
-    merge_fields: {}
+  const errorGen = msg => {
+    return { statusCode: 500, body: msg };
   };
-
-  const subscriber = JSON.stringify(data);
-  console.log("Sending data to mailchimp", subscriber);
-
-  // Subscribe an email
-
-  axios(
-      {
-        method: 'post',
-        url: `https://us20.api.mailchimp.com/3.0/lists/${mailChimpListID}/members/`,
-        data: subscriber,
-        auth: {
-          username: 'apikey', // any value will work
-          password: mailChimpAPI
+  try {
+    const { email } = JSON.parse(event.body);
+    if (!email) {
+      return errorGen('Missing Email');
+    }
+    const subscriber = {
+      email_address: email,
+      status: 'subscribed',
+    };
+    const creds = `any:${process.env.MAILCHIMP_KEY}`;
+    const response = await fetch(
+        `https://us20.api.mailchimp.com/3.0/lists/9fae1f7a02/members/`,
+        {
+          method: 'POST',
+          headers: {
+            Accept: '*/*',
+            'Content-Type': 'application/json',
+            Authorization: `Basic ${base64.encode(creds)}`,
+          },
+          body: JSON.stringify(subscriber),
         }
-      }
-  ).then(function(response){
-    console.log(`status:${response.status}` )
-    console.log(`data:${response.data}` )
-    console.log(`headers:${response.headers}` )
-
-    if (response.headers['content-type'] === 'application/x-www-form-urlencoded') {
-      // Do redirect for non JS enabled browsers
-      return callback(null, {
-        statusCode: 302,
-        headers: {
-          Location: '/thanks.html',
-          'Cache-Control': 'no-cache',
-        },
-        body: JSON.stringify({})
-      });
+    );
+    const data = await response.json();
+    if (!response.ok) {
+      // NOT res.status >= 200 && res.status < 300
+      return { statusCode: data.status, body: data.detail };
     }
-
-    // Return data to AJAX request
-    return callback(null, {
+    return {
       statusCode: 200,
-      body: JSON.stringify({ emailAdded: true })
-    })
-  }).catch(function(error) {
-    if (error.response) {
-      // The request was made and the server responded with a status code
-      // that falls out of the range of 2xx
-      console.log(error.response.data);
-      console.log(error.response.status);
-      console.log(error.response.headers);
-    } else if (error.request) {
-      // The request was made but no response was received
-      console.log(error.request);
-    } else {
-      // Something happened in setting up the request that triggered an Error
-      console.log('Error', error.message);
-    }
-    console.log(error.config);
-  });
+      body: JSON.stringify({
+        msg: "You've signed up to the mailing list!",
+        detail: data,
+      }),
+    };
+  } catch (err) {
+    console.log(err); // output to netlify function log
+    return {
+      statusCode: 500,
+      body: JSON.stringify({ msg: err.message }), // Could be a custom message or object i.e. JSON.stringify(err)
+    };
+  }
 };
