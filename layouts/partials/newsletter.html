@@ -5,10 +5,36 @@
         {{- else -}}
         <p class="text-base mt-2">Want more content like this? Subscribe for tech related tips, tricks and tutorials! No spam, unsubscribe anytime.</p>
         {{- end }}
-        <form class="w-full mb-2">
+        <form class="w-full mb-2" id="newsletter" action="/.netlify/functions/subscribe" method="POST">
             <label class="block hidden" for="email">Email Address</label>
             <input type="email" class="mb-3 p-2 mr-2 border-b-2 appearance-none rounded focus:bg-white focus:outline-none focus:border-blue-500" name="email" id="email" placeholder="Email Address">
             <button class="bg-blue-500 hover:bg-blue-400 text-white p-2 rounded" type="submit">Subscribe</button>
+            <div id="message"></div>
         </form>
     </div>
 </div>
+
+<script>
+    var form = document.getElementById('newsletter');
+
+    form.addEventListener("submit", function(e) {
+        e.preventDefault();
+        email = document.getElementById('email').value;
+        submitEmail(email)
+    });
+
+    function submitEmail(email) {
+        fetch('/.netlify/functions/subscribe', {
+            method: 'post',
+            body: JSON.stringify({
+                email: email
+            })
+        }).then(function(response) {
+            return response.json();
+        }).then(function(data) {
+            console.log('data from function', data);
+            messageDiv = document.getElementById('message');
+            messageDiv.innerText = 'Confirmation email has been sent!'
+        });
+    };
+</script>
