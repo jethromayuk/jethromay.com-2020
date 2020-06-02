@@ -1,4 +1,4 @@
-import { parse } from 'querystring'
+const queryString = require('querystring');
 const axios = require('axios');
 const mailChimpAPI = process.env.MAILCHIMP_KEY;
 const mailChimpListID = process.env.MAILCHIMP_LIST_ID;
@@ -8,7 +8,7 @@ exports.handler = (event, context, callback) => {
   try {
     body = JSON.parse(event.body)
   } catch (e) {
-    body = parse(event.body)
+    body = queryString.parse(event.body)
   }
 
   if (!body.email) {
