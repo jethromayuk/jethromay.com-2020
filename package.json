@@ -8,6 +8,8 @@
   },
   "dependencies": {
     "autoprefixer": "^9.8.0",
+    "base-64": "^0.1.0",
+    "node-fetch": "^2.6.0",
     "postcss": "^7.0.31",
     "postcss-cli": "^7.1.1",
     "postcss-nested": "^4.2.1",
