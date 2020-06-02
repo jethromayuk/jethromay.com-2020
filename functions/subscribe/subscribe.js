@@ -11,7 +11,7 @@ const base64 = require('base-64'); exports.handler = async (event, context) => {
         }     const subscriber = {
             email_address: email,
             status: 'subscribed',
-        };     const creds = `any:${process.env.MAILCHIMP_KEY}`;    const response = await fetch('https://{data_center}.api.mailchimp.com/3.0/lists/{list_id}/members/', {
+        };     const creds = `any:${process.env.MAILCHIMP_KEY}`;    const response = await fetch('https://us20.api.mailchimp.com/3.0/lists/9fae1f7a02/members/', {
             method: 'POST',
             headers: {
                 Accept: '*/*',

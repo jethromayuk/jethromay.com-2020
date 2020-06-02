@@ -1,6 +1,12 @@
 [build]
 command = "hugo --minify"
 publish = "public"
+functions = "functions"
+
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
 
 [build.environment]
 HUGO_VERSION = "0.71.1"
