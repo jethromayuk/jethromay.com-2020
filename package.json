@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "autoprefixer": "^9.8.0",
+    "dotenv": "^8.1.0",
     "netlify-cli": "^2.52.0",
     "netlify-lambda": "^1.6.3",
     "postcss": "^7.0.31",
