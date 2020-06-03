@@ -11,13 +11,14 @@
 </div>
 
 <script>
-    var newsletter = document.querySelector('form');
-
-    newsletter.addEventListener("submit", function(e) {
-        e.preventDefault();
-        email = document.getElementById('email').value;
-        submitEmail(email)
-    });
+    let newsletter = document.querySelector('form');
+    if (newsletter) {
+        newsletter.addEventListener('submit', e => {
+            e.preventDefault();
+            let email = document.getElementById('email').value;
+            submitEmail(email);
+        })
+    }
 
     function submitEmail(email) {
         fetch('/.netlify/functions/subscribe', {

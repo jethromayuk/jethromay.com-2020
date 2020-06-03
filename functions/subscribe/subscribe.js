@@ -1,8 +1,7 @@
-const fetch = require("node-fetch");
+const fetch = require('node-fetch');
+const base64 = require('base-64');
 
-exports.handler = function (event, context, callback) {
-
-  const auth = `any:${process.env.MAILCHIMP_API_KEY}`;
+exports.handler = async (event, context, callback) => {
 
   if (process.env.MAILCHIMP_API_KEY === undefined) {
     callback(null, {
@@ -34,25 +33,33 @@ exports.handler = function (event, context, callback) {
 
   const subscriber = {
     email_address: email,
-    status: 'subscribed'
+    status: 'subscribed',
   };
 
-  const url = `https://us20.api.mailchimp.com/3.0/lists/${listId}/members/`
+  const auth = `any:${process.env.MAILCHIMP_API_KEY}`;
+  const response = await fetch(`https://us20.api.mailchimp.com/3.0/lists/${process.env.MAILCHIMP_LIST_ID}/members/`,
+      {
+        method: 'POST',
+        headers: {
+          Accept: '*/*',
+          'Content-Type': 'application/json',
+          Authorization: `Basic ${base64.encode(auth)}`,
+        },
+        body: JSON.stringify(subscriber),
+      }
+  );
 
-  fetch(url, {
-    method: 'POST',
-    headers: {
-      Accept: '*/*',
-      'Content-Type': 'application/json',
-      'Authorization': `Basic ${auth}`,
-    },
-    body: JSON.stringify(subscriber),
-  })
-  .then(x => x.json())
-  .then(data => {
-    callback(null, {
-      statusCode: 200,
-      body: JSON.stringify({ msg: "Subscription updated" })
-    })
-  })
+  const data = await response.json();
+
+  if (!response.ok) {
+    return { statusCode: data.status, body: data.detail };
+  }
+
+  return {
+    statusCode: 200,
+    body: JSON.stringify({
+      msg: "You've signed up to the mailing list!",
+      detail: data,
+    }),
+  };
 };
