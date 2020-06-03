@@ -18,19 +18,19 @@
         </div>
         <nav class="w-full flex-grow lg:flex lg:items-center lg:w-1/2 lg:block mt-2 hidden lg:mt-0" x-state:on="Open" x-state:off="closed" :class="{ 'block': open, 'hidden': !open }" aria-label="Main">
             <ul class="lg:flex flex-1 items-center lg:justify-end md:px-0 py-2">
-                <li class="lg:mr-3 lg:ml-3 lg:invisible xs:pb-1">
-                    <a href="/" class="text-gray-600 hover:underline xs:text-lg">Home</a>
+                <li class="lg:mr-3 lg:ml-3 lg:invisible pb-2">
+                    <a href="/" class="text-gray-600 hover:underline text-lg">Home</a>
                 </li>
                 {{ $current := . }}
                 {{ range .Site.Menus.main }}
-                    <li class="lg:mr-3 lg:ml-3 xs:py-1 sm:py-3 xs:text-lg">
+                    <li class="lg:mr-3 text-lg lg:ml-3 xs:py-1 py-2">
                         {{ $active := or ($current.IsMenuCurrent "main" .) ($current.HasMenuCurrent "main" .) }}
                         {{ $active = or $active (eq .Name $current.Title) }}
                         {{ $active = or $active (and (eq .Name "Posts") (eq $current.Section "posts")) }}
                         <a href="{{ .URL }}" class="text-gray-600 hover:underline lg:text-lg {{ if $active }}text-gray-800{{ end }}">{{ .Name }}</a>
                     </li>
                 {{ end }}
-                <li class="flex items-center lg:ml-3 xs:pt-2 sm:py-3">
+                <li class="flex items-center lg:ml-3 pt-2 pb-1">
                     <a href='https://ko-fi.com/jethromay'
                        class="inline-block w-8"
                        target="_blank"
