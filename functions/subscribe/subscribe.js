@@ -1,52 +1,44 @@
-const fetch = require('node-fetch');
-const base64 = require('base-64');
+const fetch = require("node-fetch");
 
-exports.handler = async (event, context) => {
-  if (event.httpMethod !== 'POST') {
-    return { statusCode: 405, body: 'Method Not Allowed' };
+exports.handler = function (event, context, callback) {
+  const listId = process.env.MAILCHIMP_LIST_ID;
+
+  if (listId === undefined) {
+    callback(null, {
+      statusCode: 400,
+      body: JSON.stringify({ error: "List ID is missing." }),
+    })
+    return;
   }
-  const errorGen = msg => {
-    return { statusCode: 500, body: msg };
+
+  const authHeader = `apikey ${process.env.MAILCHIMP_KEY}`;
+
+  if (process.env.MAILCHIMP_API_KEY === undefined) {
+    callback(null, {
+      statusCode: 400,
+      body: JSON.stringify({ error: "API key is missing" }),
+    })
+    return;
+  }
+
+  const subscriber = {
+    email_address: email,
+    status: 'subscribed'
   };
-  try {
-    const { email } = JSON.parse(event.body);
-    if (!email) {
-      return errorGen('Missing Email');
-    }
-    const subscriber = {
-      email_address: email,
-      status: 'subscribed',
-    };
-    const creds = `any:${process.env.MAILCHIMP_KEY}`;
-    const response = await fetch(
-        `https://us20.api.mailchimp.com/3.0/lists/${process.env.MAILCHIMP_LIST_ID}/members/`,
-        {
-          method: 'POST',
-          headers: {
-            Accept: '*/*',
-            'Content-Type': 'application/json',
-            Authorization: `Basic ${base64.encode(creds)}`,
-          },
-          body: JSON.stringify(subscriber),
-        }
-    );
-    const data = await response.json();
-    if (!response.ok) {
-      // NOT res.status >= 200 && res.status < 300
-      return { statusCode: data.status, body: data.detail };
-    }
-    return {
+
+  const url = `https://us20.api.mailchimp.com/3.0/lists/${listId}/members/`
+
+  fetch(url, {
+    method: 'PATCH',
+    headers: {
+      'Authorization': authHeader,
+    },
+    body: JSON.stringify(subscriber),
+  }).then(x => x.json()).then(data => {
+    console.log(`Request successful: ${JSON.stringify(data)}`);
+    callback(null, {
       statusCode: 200,
-      body: JSON.stringify({
-        msg: "You've signed up to the mailing list!",
-        detail: data,
-      }),
-    };
-  } catch (err) {
-    console.log(err); // output to netlify function log
-    return {
-      statusCode: 500,
-      body: JSON.stringify({ msg: err.message }), // Could be a custom message or object i.e. JSON.stringify(err)
-    };
-  }
+      body: JSON.stringify({ msg: "Subscription updated" })
+    })
+  })
 };

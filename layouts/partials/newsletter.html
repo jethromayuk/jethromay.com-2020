@@ -1,7 +1,7 @@
 <div class="subscribe mt-8 mb-10">
     <div class="container mx-auto bg-gray-200 py-6 px-6 rounded">
         <p class="text-base mt-2">Subscribe to my newsletter for tech related tips, tricks and tutorials! No spam, unsubscribe anytime.</p>
-        <form class="w-full mb-2" id="newsletter">
+        <form class="w-full mb-2">
             <label class="block hidden" for="email">Email Address</label>
             <input class="mb-3 p-2 mr-2 border-b-2 appearance-none rounded focus:bg-white focus:outline-none focus:border-blue-500" name="email" id="email" type="email" x-model="email" placeholder="Email Address">
             <button class="bg-blue-500 hover:bg-blue-400 text-white p-2 rounded" type="submit">Subscribe</button>
@@ -11,7 +11,7 @@
 </div>
 
 <script>
-    var newsletter = document.getElementById('newsletter');
+    var newsletter = document.querySelector('form');
 
     newsletter.addEventListener("submit", function(e) {
         e.preventDefault();
@@ -25,12 +25,12 @@
             body: JSON.stringify({
                 email: email
             })
-        }).then(function(response) {
-            return response.json();
-        }).then(function(data) {
-            console.log('Data:', data);
+        }).then(response => {
+            console.log('Data:', JSON.stringify(response));
             messageDiv = document.getElementById('message');
-            messageDiv.innerText = data.msg
+            messageDiv.innerText = response.msg
+        }).catch(error => {
+            console.log(error);
         });
     }
 </script>
