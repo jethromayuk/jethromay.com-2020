@@ -28,7 +28,7 @@
         }).then(response => {
             console.log('Data:', JSON.stringify(response));
             messageDiv = document.getElementById('message');
-            messageDiv.innerText = response.msg
+            messageDiv.innerText = response;
         }).catch(error => {
             console.log(error);
         });
