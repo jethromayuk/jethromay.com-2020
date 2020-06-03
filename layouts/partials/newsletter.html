@@ -7,7 +7,7 @@
         {{- end }}
         <form class="w-full mb-2" id="newsletter">
             <label class="block hidden" for="email">Email Address</label>
-            <input class="mb-3 p-2 mr-2 border-b-2 appearance-none rounded focus:bg-white focus:outline-none focus:border-blue-500" name="email" id="email" type="email" placeholder="Email Address">
+            <input class="mb-3 p-2 mr-2 border-b-2 appearance-none rounded focus:bg-white focus:outline-none focus:border-blue-500" name="email" id="email" type="email" x-model="email" placeholder="Email Address">
             <button class="bg-blue-500 hover:bg-blue-400 text-white p-2 rounded" type="submit">Subscribe</button>
             <div id="message"></div>
         </form>
@@ -15,9 +15,9 @@
 </div>
 
 <script>
-    var form = document.getElementById('newsletter');
+    var newsletter = document.getElementById('newsletter');
 
-    form.addEventListener("submit", function(e) {
+    newsletter.addEventListener("submit", function(e) {
         e.preventDefault();
         email = document.getElementById('email').value;
         submitEmail(email)
@@ -25,17 +25,17 @@
 
     function submitEmail(email) {
         fetch('/.netlify/functions/subscribe', {
-            method: 'post',
+            method: 'POST',
             body: JSON.stringify({
                 email: email
             })
         }).then(function(response) {
             return response.json();
         }).then(function(data) {
-            console.log('data from function', data);
+            console.log('Data:', data);
             messageDiv = document.getElementById('message');
-            messageDiv.innerText = 'Confirmation email has been sent!'
+            messageDiv.innerText = data.msg
         });
-    };
+    }
 </script>
 
