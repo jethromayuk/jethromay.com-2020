@@ -2,7 +2,7 @@ const fetch = require("node-fetch");
 
 exports.handler = function (event, context, callback) {
 
-  const authHeader = `any ${process.env.MAILCHIMP_API_KEY}`;
+  const auth = `any:${process.env.MAILCHIMP_API_KEY}`;
 
   if (process.env.MAILCHIMP_API_KEY === undefined) {
     callback(null, {
@@ -44,14 +44,15 @@ exports.handler = function (event, context, callback) {
     headers: {
       Accept: '*/*',
       'Content-Type': 'application/json',
-      'Authorization': `Basic ${authHeader}`,
+      'Authorization': `Basic ${auth}`,
     },
     body: JSON.stringify(subscriber),
-  }).then(x => x.json()).then(data => {
-    console.log(`Request successful: ${JSON.stringify(data)}`);
+  })
+  .then(x => x.json())
+  .then(data => {
     callback(null, {
       statusCode: 200,
-      body: JSON.stringify({ msg: data })
+      body: JSON.stringify({ msg: "Subscription updated" })
     })
   })
 };
