@@ -2,7 +2,6 @@ const fetch = require('node-fetch');
 const base64 = require('base-64');
 
 exports.handler = async (event, context) => {
-  // Only allow POST
   if (event.httpMethod !== 'POST') {
     return { statusCode: 405, body: 'Method Not Allowed' };
   }
