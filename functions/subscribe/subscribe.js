@@ -51,7 +51,7 @@ exports.handler = function (event, context, callback) {
     console.log(`Request successful: ${JSON.stringify(data)}`);
     callback(null, {
       statusCode: 200,
-      body: JSON.stringify({ msg: "Subscription updated" })
+      body: JSON.stringify({ msg: data })
     })
   })
 };
