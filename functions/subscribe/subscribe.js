@@ -20,7 +20,7 @@ exports.handler = async (event, context) => {
     };
     const creds = `any:${process.env.MAILCHIMP_KEY}`;
     const response = await fetch(
-        `https://us20.api.mailchimp.com/3.0/lists/9fae1f7a02/members/`,
+        `https://us20.api.mailchimp.com/3.0/lists/${process.env.MAILCHIMP_LIST_ID}/members/`,
         {
           method: 'POST',
           headers: {
