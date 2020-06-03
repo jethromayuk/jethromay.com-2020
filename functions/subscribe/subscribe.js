@@ -11,7 +11,7 @@ exports.handler = function (event, context, callback) {
     return;
   }
 
-  const authHeader = `apikey ${process.env.MAILCHIMP_KEY}`;
+  const authHeader = `apikey ${process.env.MAILCHIMP_API_KEY}`;
 
   if (process.env.MAILCHIMP_API_KEY === undefined) {
     callback(null, {
