@@ -1,14 +1,15 @@
 {
   "name": "jethromay.com",
   "version": "1.0.0",
-  "description": "",
+  "description": "My personal website built with Hugo and Tailwind.",
   "main": "index.js",
   "scripts": {
     "postinstall": "netlify-lambda install"
   },
   "dependencies": {
+    "base-64": "^0.1.0",
+    "node-fetch": "^2.6.0",
     "autoprefixer": "^9.8.0",
-    "dotenv": "^8.1.0",
     "netlify-cli": "^2.52.0",
     "netlify-lambda": "^1.6.3",
     "postcss": "^7.0.31",
@@ -16,7 +17,10 @@
     "postcss-nested": "^4.2.1",
     "tailwindcss": "^1.4.6"
   },
-  "keywords": [],
+  "keywords": [
+    "hugo",
+    "blog"
+  ],
   "author": "Jethro May <hello@jethromay.com>",
   "license": "MIT",
   "repository": {
