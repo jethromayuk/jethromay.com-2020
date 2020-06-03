@@ -2,22 +2,22 @@ const fetch = require("node-fetch");
 
 exports.handler = function (event, context, callback) {
 
+  const authHeader = `any ${process.env.MAILCHIMP_API_KEY}`;
+
+  if (process.env.MAILCHIMP_API_KEY === undefined) {
+    callback(null, {
+      statusCode: 400,
+      body: JSON.stringify({ error: "API key is missing" }),
+    })
+    return;
+  }
+
   const listId = process.env.MAILCHIMP_LIST_ID;
 
   if (listId === undefined) {
     callback(null, {
       statusCode: 400,
       body: JSON.stringify({ error: "List ID is missing." }),
-    })
-    return;
-  }
-
-  const authHeader = `apikey ${process.env.MAILCHIMP_API_KEY}`;
-
-  if (process.env.MAILCHIMP_API_KEY === undefined) {
-    callback(null, {
-      statusCode: 400,
-      body: JSON.stringify({ error: "API key is missing" }),
     })
     return;
   }
@@ -40,9 +40,11 @@ exports.handler = function (event, context, callback) {
   const url = `https://us20.api.mailchimp.com/3.0/lists/${listId}/members/`
 
   fetch(url, {
-    method: 'PATCH',
+    method: 'POST',
     headers: {
-      'Authorization': authHeader,
+      Accept: '*/*',
+      'Content-Type': 'application/json',
+      'Authorization': `Basic ${authHeader}`,
     },
     body: JSON.stringify(subscriber),
   }).then(x => x.json()).then(data => {
