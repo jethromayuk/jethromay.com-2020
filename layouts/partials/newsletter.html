@@ -12,6 +12,8 @@
 
 <script>
     let newsletter = document.querySelector('form');
+    let messageDiv = document.getElementById('message');
+
     if (newsletter) {
         newsletter.addEventListener('submit', e => {
             e.preventDefault();
@@ -27,9 +29,9 @@
                 email: email
             })
         }).then(response => {
-            console.log('Data:', JSON.stringify(response));
-            messageDiv = document.getElementById('message');
-            messageDiv.innerText = response;
+            console.log(response)
+            console.log(JSON.stringify(response));
+            messageDiv.innerText = 'A confirmation email has been sent!';
         }).catch(error => {
             console.log(error);
         });

@@ -52,14 +52,17 @@ exports.handler = async (event, context, callback) => {
   const data = await response.json();
 
   if (!response.ok) {
-    return { statusCode: data.status, body: data.detail };
+    callback(null, {
+      statusCode: data.status,
+      body: data.detail,
+    })
+    return;
   }
 
   return {
     statusCode: 200,
     body: JSON.stringify({
-      msg: "You've signed up to the mailing list!",
-      detail: data,
+      msg: "You've signed up to the mailing list!"
     }),
   };
 };
