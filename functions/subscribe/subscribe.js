@@ -1,6 +1,7 @@
 const fetch = require("node-fetch");
 
 exports.handler = function (event, context, callback) {
+
   const listId = process.env.MAILCHIMP_LIST_ID;
 
   if (listId === undefined) {
@@ -17,6 +18,16 @@ exports.handler = function (event, context, callback) {
     callback(null, {
       statusCode: 400,
       body: JSON.stringify({ error: "API key is missing" }),
+    })
+    return;
+  }
+
+  const { email } = JSON.parse(event.body);
+
+  if (!email) {
+    callback(null, {
+      statusCode: 400,
+      body: JSON.stringify({ error: "Email address is missing" }),
     })
     return;
   }
