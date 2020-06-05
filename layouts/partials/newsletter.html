@@ -28,9 +28,8 @@
             body: JSON.stringify({
                 email: email
             })
-        }).then(function(response) {
-            return response;
-        }).then(function(data) {
+        }).then(response => response.json())
+          .then(data => {
             console.log(data)
             messageDiv.innerText = 'A confirmation email has been sent!';
         });

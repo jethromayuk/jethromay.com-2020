@@ -1,24 +1,22 @@
 const fetch = require('node-fetch');
-const base64 = require('base-64');
+
+const MAILCHIMP_API_KEY = process.env.MAILCHIMP_API_KEY;
+const MAILCHIMP_LIST_ID = process.env.MAILCHIMP_LIST_ID;
 
 exports.handler = async (event, context, callback) => {
 
-  if (process.env.MAILCHIMP_API_KEY === undefined) {
+  if (MAILCHIMP_API_KEY === undefined) {
     callback(null, {
       statusCode: 400,
-      body: JSON.stringify({ error: "API key is missing" }),
-    })
-    return;
+      body: JSON.stringify({ error: "Mailchimp API key is missing" }),
+    });
   }
 
-  const listId = process.env.MAILCHIMP_LIST_ID;
-
-  if (listId === undefined) {
+  if (MAILCHIMP_LIST_ID === undefined) {
     callback(null, {
       statusCode: 400,
-      body: JSON.stringify({ error: "List ID is missing." }),
-    })
-    return;
+      body: JSON.stringify({ error: "Mailchimp list id is missing" }),
+    });
   }
 
   const { email } = JSON.parse(event.body);
@@ -27,8 +25,7 @@ exports.handler = async (event, context, callback) => {
     callback(null, {
       statusCode: 400,
       body: JSON.stringify({ error: "Email address is missing" }),
-    })
-    return;
+    });
   }
 
   const subscriber = {
@@ -36,14 +33,13 @@ exports.handler = async (event, context, callback) => {
     status: 'subscribed',
   };
 
-  const auth = `any:${process.env.MAILCHIMP_API_KEY}`;
-  const response = await fetch(`https://us20.api.mailchimp.com/3.0/lists/${process.env.MAILCHIMP_LIST_ID}/members/`,
+  const response = await fetch(`https://us20.api.mailchimp.com/3.0/lists/${MAILCHIMP_LIST_ID}/members/`,
       {
         method: 'POST',
         headers: {
           Accept: '*/*',
           'Content-Type': 'application/json',
-          Authorization: `Basic ${base64.encode(auth)}`,
+          Authorization: `apikey ${MAILCHIMP_API_KEY}`,
         },
         body: JSON.stringify(subscriber),
       }
@@ -55,8 +51,7 @@ exports.handler = async (event, context, callback) => {
     callback(null, {
       statusCode: data.status,
       body: data.detail,
-    })
-    return;
+    });
   }
 
   return {
