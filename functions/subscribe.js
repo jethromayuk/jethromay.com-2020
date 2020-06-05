@@ -30,7 +30,7 @@ exports.handler = async (event, context, callback) => {
 
   const subscriber = {
     email_address: email,
-    status: 'subscribed',
+    status: 'pending',
   };
 
   const response = await fetch(`https://us20.api.mailchimp.com/3.0/lists/${MAILCHIMP_LIST_ID}/members/`,
