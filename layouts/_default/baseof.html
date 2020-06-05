@@ -39,7 +39,9 @@
 
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.3.5/dist/alpine.min.js" defer></script>
 
-    {{ template "_internal/google_analytics.html" . }}
+    {{ if eq (getenv "HUGO_ENV") "production" }}
+        {{ template "_internal/google_analytics.html" . }}
+    {{ end }}
 </head>
 
 <body class="antialiased flex flex-col h-screen">
