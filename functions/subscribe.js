@@ -57,7 +57,7 @@ exports.handler = async (event, context, callback) => {
   return {
     statusCode: 200,
     body: JSON.stringify({
-      msg: "You've signed up to the mailing list!"
+      message: "Almost there! Check your inbox for a confirmation e-mail."
     }),
   };
 };

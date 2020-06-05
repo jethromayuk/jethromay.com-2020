@@ -30,8 +30,7 @@
             })
         }).then(response => response.json())
           .then(data => {
-            console.log(data)
-            messageDiv.innerText = 'A confirmation email has been sent!';
+            messageDiv.innerText = data.message;
         });
     }
 </script>
