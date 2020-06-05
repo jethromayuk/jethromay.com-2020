@@ -24,6 +24,10 @@ p {
     @apply leading-relaxed text-lg
 }
 
+pre {
+    @apply leading-normal p-6
+}
+
 main p:not(:last-child) {
     @apply mb-4
 }
