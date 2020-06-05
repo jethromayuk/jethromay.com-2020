@@ -4,7 +4,7 @@
 
 My personal website built with Hugo & Tailwind. 
 
-While my project is open source, I encourage you not to copy or reuse the code in this repository. This repository exists to showcase what I have learnt during my career as a web developer with the hope that it will benefit others.
+While my project is open source, I encourage you not to copy or reuse the code in this repository. 
 
 ## Built With
 
