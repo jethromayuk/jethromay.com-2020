@@ -14,7 +14,6 @@
     "netlify-lambda": "^1.6.3",
     "postcss": "^7.0.31",
     "postcss-cli": "^7.1.1",
-    "postcss-nested": "^4.2.1",
     "tailwindcss": "^1.4.6"
   },
   "keywords": [
