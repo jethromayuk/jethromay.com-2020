@@ -1,12 +1,11 @@
 {{ define "main" }}
     <section class="md:mt-20" id="posts">
         <h1 class="xs:text-4xl">{{ .Title }}</h1>
-        {{ .Content }}
         {{ $paginator := .Paginate (where .Pages "Type" "posts") }}
         {{ range $paginator.Pages }}
         <article>
             <header class="mb-4">
-                <h1 class="text-2xl mb-0 mr-3">
+                <h1 class="text-3xl mb-0 mr-3">
                     <a href="{{ .RelPermalink }}">{{ .Title }}</a>
                 </h1>
                 <p class="text-sm text-gray-600 mb-6">
@@ -25,6 +24,6 @@
         </article>
         {{ end }}
     </section>
-
     {{ template "_internal/pagination.html" . }}
+    {{ partial "newsletter.html" . }}
 {{ end }}

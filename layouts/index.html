@@ -1,5 +1,5 @@
 {{ define "main" }}
-    <div class="intro lg:pt-20 lg:pb-10 mb-10">
+    <div class="intro xs:mb-12 lg:pt-20 lg:pb-10">
         <div class="flex flex-col">
             <h1 class="font-bold text-6xl xs:text-4xl sm:text-5xl">Hey, I'm Jethro.</h1>
             <p class="mt-0 mb-4">I'm a full-stack web developer &amp; writer with a passion for Laravel.</p>
@@ -11,12 +11,12 @@
             </div>
         </div>
     </div>
-    <section class="mt-8 mb-10" id="posts">
+    <section class="xs:mb-12 mt-8 mb-10" id="posts">
         {{ range first 5 (where $.Site.RegularPages "Section" "posts") }}
             <article>
                 <header class="mb-4">
                     <div class="flex items-center">
-                        <h1 class="text-2xl mb-0 mr-3">
+                        <h1 class="text-3xl mb-0 mr-3">
                             <a href="{{ .RelPermalink }}">{{ .Title }}</a>
                         </h1>
                     </div>
@@ -36,6 +36,4 @@
             </article>
         {{ end }}
     </section>
-    {{ partial "newsletter.html" . }}
-<script></script>
 {{ end }}

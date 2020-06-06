@@ -4,13 +4,12 @@ title = "Jethro May"
 
 enableGitInfo = true
 
+disableKinds = ["categories", "tags"]
+
 [params]
     author = "Jethro May"
     title = "Full-stack web developer & writer."
     description = "Jethro May is a full-stack web developer & writer with a passion for Laravel."
-
-[taxonomies]
-   tag = "tags"
 
 [permalinks]
     posts = "/posts/:slug"
