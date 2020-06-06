@@ -4,7 +4,7 @@ title = "Jethro May"
 
 enableGitInfo = true
 
-disableKinds = ["categories", "tags"]
+disableKinds = ["taxonomy", "taxonomyTerm"]
 
 [params]
     author = "Jethro May"

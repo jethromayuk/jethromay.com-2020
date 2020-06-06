@@ -3,7 +3,6 @@ title: "2020 Website Refresh"
 description: "I wanted to redesign my website and create a platform to share the knowledge I learn throughout my career."
 publishdate: 2020-05-10
 draft: false
-tags: Website
 ---
 
 With the advent of 2020, I decided that it was time to launch a brand new website. Not only did I want to refresh the look and feel of my website, but I also wanted to create a platform where I could share my thoughts as well as the knowledge I have learnt throughout my career thus far, hopefully helping other developers.
