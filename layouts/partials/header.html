@@ -1,8 +1,10 @@
-<header class="w-full bg-white lg:p-2 xs:border-2 xs:border-gray-200 sm:border-2 sm:border-gray-200 md:border-2 md:border-gray-200 lg:border-0 fixed top-0 z-50"
-        x-data="{ open: false }"
+<header class="w-full bg-white xs:border-b-2 xs:shadow-none sm:shadow-none sm:border-b-2 lg:border-0 lg:p-2 fixed top-0 z-50"
+        x-data="{ open: false, top: false }"
+        :class="{ 'md:shadow-none lg:shadow-none': !top, 'md:shadow-none lg:shadow': top }"
+        @scroll.window="top = (window.scrollY > 60)"
         @keydown.window.escape="open = false"
         @click.away="open = false">
-    <div class="w-full container mx-auto flex flex-wrap items-center mt-0 py-3 xs:px-4 sm:px-4 md:px-4 lg:px-4 xs:border-b">
+    <div class="w-full container mx-auto flex flex-wrap items-center mt-0 py-3 xs:px-4 sm:px-4 md:px-4 lg:px-4">
         <div class="justify-between flex items-center xs:w-full sm:w-full md:w-full md:px-0 lg:px-0 lg:w-1/2">
             <a href="/" class="flex text-black font-bold no-underline hover:no-underline" title="Jethro May">
                 <span class="text-lg">Jethro May</span>
