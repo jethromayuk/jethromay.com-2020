@@ -35,7 +35,7 @@
         .then(response => response.text())
         .then(body => {
             try {
-                messageDiv.innerText = JSON.parse(body.message);
+                messageDiv.innerText = body;
                 messageDiv.classList.add('text-green-400');
             } catch {
                 messageDiv.innerText = body;
