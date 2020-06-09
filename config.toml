@@ -6,8 +6,10 @@ enableGitInfo = true
 
 disableKinds = ["taxonomy", "taxonomyTerm"]
 
+[author]
+    name = "Jethro May"
+
 [params]
-    author = "Jethro May"
     title = "Full-stack web developer & writer."
     description = "Jethro May is a full-stack web developer & writer with a passion for Laravel."
 
