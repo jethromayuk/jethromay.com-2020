@@ -50,7 +50,7 @@ exports.handler = async (event, context, callback) => {
   if (!response.ok) {
     callback(null, {
       statusCode: data.status,
-      body: data.detail,
+      body: email + ' is already a subscriber or there was an error communicating with the server. Please try again later.',
     });
   }
 

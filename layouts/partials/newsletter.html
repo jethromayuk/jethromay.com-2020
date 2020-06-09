@@ -5,14 +5,14 @@
             <label class="block hidden" for="email">Email Address</label>
             <input class="mb-3 p-2 mr-2 border-b-2 appearance-none rounded focus:bg-white focus:outline-none focus:border-blue-500" name="email" id="email" type="email" x-model="email" placeholder="Email Address">
             <button class="bg-blue-500 hover:bg-blue-400 text-white p-2 rounded" type="submit">Subscribe</button>
-            <div class="text-sm italic text-green-400" id="message"></div>
+            <div class="text-sm italic" id="message"></div>
         </form>
     </div>
 </div>
 
 <script>
-    let newsletter = document.querySelector('form');
-    let messageDiv = document.getElementById('message');
+    const newsletter = document.querySelector('form');
+    const messageDiv = document.getElementById('message');
 
     if (newsletter) {
         newsletter.addEventListener('submit', e => {
@@ -25,13 +25,27 @@
     function submitEmail(email) {
         fetch('/.netlify/functions/subscribe', {
             method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
             body: JSON.stringify({
                 email: email
             })
-        }).then(response => response.json())
-          .then(data => {
-            messageDiv.innerText = data.message;
+        })
+        .then(response => response.text())
+        .then(body => {
+            try {
+                messageDiv.innerText = JSON.parse(body.message);
+                messageDiv.classList.add('text-green-400');
+            } catch {
+                messageDiv.innerText = body;
+                messageDiv.classList.add('text-red-400');
+            }
         });
+    }
+
+    function handleError() {
+        messageDiv.innerText = 'Oops! That wasn\'t supposed to happen. Please try again later.';
     }
 </script>
 
