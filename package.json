@@ -2,7 +2,6 @@
   "name": "jethromay.com",
   "version": "1.0.0",
   "description": "My personal website built with Hugo and Tailwind.",
-  "main": "index.js",
   "scripts": {
     "postinstall": "netlify-lambda install"
   },
