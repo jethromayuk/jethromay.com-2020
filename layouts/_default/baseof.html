@@ -51,7 +51,7 @@
 
     <link rel="alternate" type="application/rss+xml" href="/posts/index.xml" title="Jethro May: Posts" />
 
-    {{ with resources.Get "css/style.css" | resources.PostCSS | minify  }}
+    {{ with resources.Get "css/style.css" | resources.PostCSS  }}
         <style>{{ .Content | safeCSS }}</style>
     {{ end }}
 
