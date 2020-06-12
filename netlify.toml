@@ -6,8 +6,3 @@ functions = "./functions"
 [build.environment]
 HUGO_VERSION = "0.71.1"
 HUGO_ENV = "production"
-
-[[headers]]
-  for = "*.js" # js files should be set this way
-  [headers.values]
-    Cache-Control = "public, max-age=604800"
