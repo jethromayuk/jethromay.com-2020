@@ -1,11 +1,11 @@
 ---
 title: "2020 Website Refresh"
-description: "I wanted to redesign my website and create a platform to share the knowledge I learn throughout my career."
-publishdate: 2020-05-10
-draft: false
+description: "With the advent of 2020, I decided that it was time to launch a brand-new website"
+date: 2020-05-10
+slug: 2020-website-refresh
 ---
 
-With the advent of 2020, I decided that it was time to launch a brand new website. Not only did I want to refresh the look and feel of my website, but I also wanted to create a platform where I could share my thoughts as well as the knowledge I have learnt throughout my career thus far, hopefully helping other developers.
+With the advent of 2020, I decided that it was time to launch a brand-new website. Not only did I want to refresh the look and feel of my website, but I also wanted to create a platform where I could share my thoughts as well as the knowledge I have learnt throughout my career thus far, hopefully helping other developers.
 
 When it came to designing the website, I decided that I wanted to focus on minimalism and develop a site that's main focus was the content. I did not want a website that looked busy or overly flashy. It had to be clean, legible and have subtle nuances that complimented the overall look and feel of the website.
 
