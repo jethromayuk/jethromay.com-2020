@@ -40,9 +40,9 @@ I predominantly work on Mac so for the purpose of this guide I will only be cove
 
 You will need to install a few things in order to get started with Hugo, the easiest way is by making use of Homebrew. The Homebrew website contains the necessary info to get started if you aren’t already making use of it. Once this is installed you can create a new Hugo site by running the following command:
 
-{{< highlight bash >}}
+```bash
 $ hugo new site site_name
-{{< / highlight >}}
+```
 
 Throughout this guide I will be using an opinionated folder structure as well as personal practices that I make use of when building projects. The folder structure of your project might be completely different and it might not suit your needs.
 
