@@ -10,7 +10,7 @@ During the last 12 months I have gone through various iterations of this website
 
 Originally built with Next.js and hosted on Vercel, this setup didn’t fit my needs for various reasons.
 
-1) I have come to the realisation over the last 12 months that I much prefer working with static HTML, CSS and a sprinkling of JavaScript where needed when working on smaller to medium projects as opposed to going with something like React or Vue. This means that while Next.js is relatively lightweight compared to other frameworks, it is still too verbose for my needs.
+1. I have come to the realisation over the last 12 months that I much prefer working with static HTML, CSS and a sprinkling of JavaScript where needed when working on smaller to medium projects as opposed to going with something like React or Vue. This means that while Next.js is relatively lightweight compared to other frameworks, it is still too verbose for my needs.
 
 > This doesn’t mean that everything I am working on is completely vanilla these days. During my day job at PlusNarrative we primarily build PHP based projects in Laravel and WordPress. The former being a framework that I am extremely passionate about. In my personal projects I work with a variety of languages/frameworks such as Laravel, Go, JavaScript, Alpine.js, Livewire and last but certainly not least Tailwind.
 
@@ -24,17 +24,17 @@ I initially decided to use this stack because I wanted to avoid paying monthly s
 
 It became a tedious task to work with the current setup, update it and plan future additions to the website let alone write content. I wanted to enjoy working on my website again and create content that other people from around the world would hopefully find valuable. 
 
-Enter Hugo.
+## Enter Hugo.
 
 Over the past few months I have been casually learning Go, simply because I wanted to learn a language that was completely different from what I am used to, PHP. After going down this path I began seeing a buzz around a framework called Hugo and found out that it is a static site generator built on top of Go. My interest was piqued. Upon landing on the homepage I noticed Hugo’s bold claim to be, and I quote:
 
-“The world’s fastest framework for building websites”
+> “The world’s fastest framework for building websites”
 
 Hugo is one of the most popular open-source static site generators. With its amazing speed and flexibility, Hugo makes building websites fun again.
 
 In a nutshell this is exactly what I wanted, a framework that is incredibly fast, flexible and most importantly makes working on my website fun again. I already knew how fast the Go language is, but after reading more about Hugo followed by watching their speed benchmark video, I was blown away. I finally settled on the idea of migrating my existing website to this framework.
 
-Setup:
+## Setup:
 
 I predominantly work on Mac so for the purpose of this guide I will only be covering that aspect and not Windows or Linux.
 
@@ -46,7 +46,7 @@ $ hugo new site site_name
 
 Throughout this guide I will be using an opinionated folder structure as well as personal practices that I make use of when building projects. The folder structure of your project might be completely different and it might not suit your needs.
 
-Folder structure:
+## Folder structure:
 
 After running the above mentioned command, Hugo will generate the following directory structure:
 
@@ -54,7 +54,7 @@ After running the above mentioned command, Hugo will generate the following dire
 
 This folder structure may seem foreign at first but I can assure you that once you get accustomed to it like most things, it is relatively straight forward. 
 
-Archetypes: An archetype is a content template which contains a set of preconfigured frontmatter variables, you can add your own or modify them in any way that you like. For example if you would like to create a template that would be used for posts, you would add a file called posts.md in this directory. My archetype directory contains one template and that is for posts, I have the following frontmatter variables defined:
+**Archetypes**: An archetype is a content template which contains a set of preconfigured frontmatter variables, you can add your own or modify them in any way that you like. For example if you would like to create a template that would be used for posts, you would add a file called posts.md in this directory. My archetype directory contains one template and that is for posts, I have the following frontmatter variables defined:
 
 [INSERT ARCHETYPE POSTS FILE IMAGE]
 
@@ -66,7 +66,7 @@ To use this template, I can run the following command which will generate a new 
 $ hugo new posts/new-post.md
 {{< / highlight >}}
  
-Assets: This directory is not created by default and is used when you want the contents to be processed by Hugo’s pipes. I utilize pipes in the following way:
+**Assets**: This directory is not created by default and is used when you want the contents to be processed by Hugo’s pipes. I utilize pipes in the following way:
 
 1) I retrieve the content of the stylesheet, which then passes it through PostCSS which will apply my browser prefixes.
 2) The output is then minified.
@@ -74,23 +74,23 @@ Assets: This directory is not created by default and is used when you want the c
 
 Note: Using the assets directory is optional, I created this so that I could make use of the above mentioned process.
 
-Content: All website content is stored within this directory. The content directory can also have nested folders which would correspond to the various content sections of your website. For example, if your website has a blog, you would create a blog folder which would contain the websites articles.
+**Content**: All website content is stored within this directory. The content directory can also have nested folders which would correspond to the various content sections of your website. For example, if your website has a blog, you would create a blog folder which would contain the websites articles.
 
-Data: I did not need to make use of this folder, so I removed it but this directory is used when you would like to add additional data/configuration for Hugo to utilize when generating your website. The files created in this directory must use the YAML, TOML or JSON file extensions
+**Data**: I did not need to make use of this folder, so I removed it but this directory is used when you would like to add additional data/configuration for Hugo to utilize when generating your website. The files created in this directory must use the YAML, TOML or JSON file extensions
 
-Layout: The layouts directory contains the various layouts used for posts, pages and other components on your website. There are a number of different templates that you can make use of, the two most common layouts are single.html and list.html. When creating a layout for a post or page, a single.html template file is used. When creating a page that renders multiple types of content a list.html file is used.
+**Layout**: The layouts directory contains the various layouts used for posts, pages and other components on your website. There are a number of different templates that you can make use of, the two most common layouts are single.html and list.html. When creating a layout for a post or page, a single.html template file is used. When creating a page that renders multiple types of content a list.html file is used.
 
-Static: The static directory is pretty straight forward, it stores all of the static assets for your website, such as CSS, JS and images. The content of this directory is stored as is, so Hugo won’t modify it.
+**Static**: The static directory is pretty straight forward, it stores all of the static assets for your website, such as CSS, JS and images. The content of this directory is stored as is, so Hugo won’t modify it.
 
-Config.toml: This file is used to house basic configuration for the project. It can also be created in other formats such as JSON or YAML but the purpose remains the same. There is a wide variety of directives that ship with Hugo which can be used that will enable you to fine tune your environment. Most projects will have a single config file which will reside inside the root of the project but for larger projects you can create a config directory which could contain multiple config files for various purposes or environments such as staging and production.
+**Config.toml**: This file is used to house basic configuration for the project. It can also be created in other formats such as JSON or YAML but the purpose remains the same. There is a wide variety of directives that ship with Hugo which can be used that will enable you to fine tune your environment. Most projects will have a single config file which will reside inside the root of the project but for larger projects you can create a config directory which could contain multiple config files for various purposes or environments such as staging and production.
 
 My configuration file is pretty straight forward and contains some basic variables that I use throughout the site:
 
-1) I set the base URL for the project.
-2) I set the default language for the HTML.
-3) I set the title, which is used inside the <title></title> tags.
-4) I enabled git info, which will allow me to retrieve the last git revision for each post.
-5) I also use disableKinds to temporarily remove tags and categories from my project.
+1 I set the base URL for the project.
+2 I set the default language for the HTML.
+3 I set the title, which is used inside the <title></title> tags.
+4 I enabled git info, which will allow me to retrieve the last git revision for each post.
+5 I also use disableKinds to temporarily remove tags and categories from my project.
 
 Custom paremeters can be added to your config file, which will be available globally in your project. These are defined by adding [params] followed by each variable on a new line:
 
@@ -108,27 +108,31 @@ If you would like to read through the rest of the available configuration option
 
 Note that upon successful compilation of the project, it will generate a further two directories:
 
-Resources: The resources directory is used to cache certain aspects of your website to speed up generation, such as images and css files.
+**Resources**: The resources directory is used to cache certain aspects of your website to speed up generation, such as images and css files.
 
-Public: The public directory is generated at build time and will contain the production build of your project, which will be used to serve your website to the web.
+**Public**: The public directory is generated at build time and will contain the production build of your project, which will be used to serve your website to the web.
 
-Additional Setup:
+## Additional Setup:
 
 I needed to add a few additional NPM packages to my project, Tailwind, PostCSS and Autoprefixer. 
 
-npm i tailwindcss && npm i postcss && npm i autoprefixer
+{{< highlight bash >}}
+$ npm i tailwindcss && npm i postcss && npm i autoprefixer
+{{< / highlight >}}
 
 Tailwind is used as the basis for most of my personal projects, it provides a fantastic base to work with when starting new projects. I also like to make use of PostCSS, which can be used to require a wide variety of plugins including the above mentioned Tailwind and Autoprefixer. 
 
 I initialize Tailwind and create a postcss.config.js file with the following commands:
 
-npx tailwind init && touch postcss.config.js 
+{{< highlight bash >}}
+$ npx tailwind init && touch postcss.config.js 
+{{< / highlight >}}
 
 The first command initializes a blank Tailwind configuration file followed by creating the PostCSS configuration file.
 
 [INSERT IMAGES OF CONFIGURATION FILES]
 
-Adding Layouts:
+## Adding Layouts:
 
 There are various types of layout files that can be created in Hugo and they all serve a specific purpose. The two most common layouts are baseof.html, list.html and single.html.
 
@@ -191,7 +195,9 @@ To make use of this pagination template, I had to create a range loop which will
 
 This will loop through all of the content inside my posts directory and output the titles of each post which is specified in the frontmatter variables. The default pagination value is set to 10 by Hugo which can be overridden inside the config.toml file by adding a paginate variable followed by your desired value:
 
+{{< highlight toml >}}
 Paginate: 5
+{{< / highlight >}}
 
 The final layout which I created was a custom 404.html template which follows the same structure as a single.html template. This template is used when a user attempts to visit a broken link or a link that does not exist. 
 
@@ -201,7 +207,7 @@ The final layout which I created was a custom 404.html template which follows th
 {{ end }}
 {{< / highlight >}}
 
-Adding Partials:
+## Adding Partials:
 
 A partial is a file that is used to include something on a page, this could be anything from a newsletter signup form or a header/footer etc. Partials are generally used for components that are reused throughout the site and serves as a handy method to avoid duplicate code. Partials can be created by adding a partials directory inside the layouts directory. Once you have created your partial, you can include that file by using the following syntax in the desired location of your project:
 
@@ -209,7 +215,7 @@ A partial is a file that is used to include something on a page, this could be a
 {{ partial “header.html” . }}
 {{< / highlight >}}
 
-Adding Page Content:
+## Adding Page Content:
 
 Page content is pulled into layouts via a variety of data sources, the most common is by using markdown files but you can also use plain HTML. Pages live inside the content directory with the file name corresponding to the page name, such as about.html or contact.html. 
 
@@ -227,16 +233,15 @@ The above syntax specifies the page has the title of “About”, it is visible 
 
 Directly below the frontmatter variables will be the page content, this can be in the form of plain text using markdown syntax or HTML.
 
-Adding Post Content:
+## Adding Post Content:
 
 Posts can be added in a similar way to pages, they also reside inside the content directory, however if you have created a blog or posts archetype, you would create a blog/posts directory inside the content directory. This would separate your page and posts content into the appropriate directory.
 
 A key difference with posts and pages is the frontmatter variables. It is considered good practice to add a title, date/publication date and a slug that will be used for the post. Further variables can be specified such as a description but these cover the most common use cases.
 
-Deploying to Netlify:
+## Deploying to Netlify:
 
 I was previously hosting my website on the Vercel platform but decided to migrate back to Netlify simply because I find the platform to be more user and developer friendly. Netlify also offers a whole host of features that Vercel does not, such as build plugins, analytics and more. 
-
 
 If you have worked with Netlify you might know that you can create an optional netlify.toml file which allows you to specify additional configuration options for your project. My config file is relatively straight forward:
 
@@ -248,7 +253,7 @@ The last optional configuration that I specify is the default version of Hugo to
 
 The netlify docs elaborate further on what else can be added to your configuration file.
 
-Closing Thoughts:
+## Closing Thoughts:
 
 I have thoroughly enjoyed working with Hugo, there have been a few minor frustrations along the way but that has purely been down to my own understanding of it. However a quick Google search has often yielded the answers to the questions I had. While my project is relatively simple and I have not developed any complicated layouts I am happy with Hugo and I can’t find fault in anything that it does. It suits my needs and I look forward to working with it in future.
 
