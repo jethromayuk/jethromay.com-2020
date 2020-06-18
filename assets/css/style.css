@@ -28,6 +28,10 @@ pre {
     @apply leading-normal p-6
 }
 
+blockquote {
+    @apply bg-gray-200 italic my-4
+}
+
 main p:not(:last-child) {
     @apply mb-4
 }
@@ -54,6 +58,10 @@ main p:not(:last-child) {
 
 .pagination li a {
     @apply text-lg underline mr-4
+}
+
+.highlight {
+    @apply mb-4
 }
 
 @tailwind utilities;
