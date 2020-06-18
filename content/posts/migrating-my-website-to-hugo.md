@@ -1,12 +1,14 @@
 ---
 title: "Migrating My Website to Hugo"
+description: "Originally built with Next.js and hosted on Vercel, this setup didn’t fit my needs for various reasons."
 date: 2020-06-18T16:13:23+02:00
+publishdate: 2020-06-18T16:13:23+02:00
 slug: migrating-my-website-to-hugo
 ---
 
 During the last 12 months I have gone through various iterations of this website, which I created to begin publishing articles on various tech related topics. 
 
-The website was previously built with Next.js and hosted on Vercel and while I absolutely love working with them and will no doubt continue working with them in future, this setup doesn’t fit my current needs for a few reasons:
+Originally built with Next.js and hosted on Vercel, this setup didn’t fit my needs for various reasons.
 
 1) I have come to the realisation over the last 12 months that I much prefer working with static HTML, CSS and a sprinkling of JavaScript where needed when working on smaller to medium projects as opposed to going with something like React or Vue. This means that while Next.js is relatively lightweight compared to other frameworks, it is still too verbose for my needs.
 
