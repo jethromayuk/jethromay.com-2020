@@ -12,7 +12,11 @@ Originally built with Next.js and hosted on Vercel, this setup didn’t fit my n
 
 1. I have come to the realisation over the last 12 months that I much prefer working with static HTML, CSS and a sprinkling of JavaScript where needed when working on smaller to medium projects as opposed to going with something like React or Vue. This means that while Next.js is relatively lightweight compared to other frameworks, it is still too verbose for my needs.
 
-> This doesn’t mean that everything I am working on is completely vanilla these days. During my day job at PlusNarrative we primarily build PHP based projects in Laravel and WordPress. The former being a framework that I am extremely passionate about. In my personal projects I work with a variety of languages/frameworks such as Laravel, Go, JavaScript, Alpine.js, Livewire and last but certainly not least Tailwind.
+<section class="bg-gray-200 p-6 my-6">
+<p>
+This doesn’t mean that everything I am working on is completely vanilla these days. During my day job at <a href="https://plusnarrative.com/" class="text-lg text-blue-400 hover:text-blue-500" target="_blank">PlusNarrative</a> we primarily build PHP based projects in Laravel and WordPress. The former being a framework that I am extremely passionate about. In my personal projects I work with a variety of languages/frameworks such as Laravel, Go, JavaScript, Alpine.js, Livewire and last but certainly not least Tailwind.
+</p>
+</section>
 
 2) I thoroughly enjoy working with Tailwind which encourages styling to be added in the markup as opposed to the stylesheet. A personal pain point with React is how, when declaring classes on each component, I cannot simply use class=””, I have to use className=”” which seems a little unnecessary. Hopefully this is changed in future versions of React.
 
@@ -24,7 +28,7 @@ I initially decided to use this stack because I wanted to avoid paying monthly s
 
 It became a tedious task to work with the current setup, update it and plan future additions to the website let alone write content. I wanted to enjoy working on my website again and create content that other people from around the world would hopefully find valuable. 
 
-## Enter Hugo.
+## Enter <a href="https://gohugo.io/" target="_blank" class="text-blue-400 hover:text-blue-500">Hugo</a>.
 
 Over the past few months I have been casually learning Go, simply because I wanted to learn a language that was completely different from what I am used to, PHP. After going down this path I began seeing a buzz around a framework called Hugo and found out that it is a static site generator built on top of Go. My interest was piqued. Upon landing on the homepage I noticed Hugo’s bold claim to be, and I quote:
 
