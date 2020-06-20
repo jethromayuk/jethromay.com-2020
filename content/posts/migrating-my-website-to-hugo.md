@@ -10,7 +10,7 @@ During the last 12 months I have gone through various iterations of this website
 
 Originally built with Next.js and hosted on Vercel, this setup didn’t fit my needs for various reasons.
 
-1. I have come to the realisation over the last 12 months that I much prefer working with static HTML, CSS and a sprinkling of JavaScript where needed when working on smaller to medium projects as opposed to going with something like React or Vue. This means that while Next.js is relatively lightweight compared to other frameworks, it is still too verbose for my needs.
+I have come to the realisation over the last 12 months that I much prefer working with static HTML, CSS and a sprinkling of JavaScript where needed when working on smaller to medium projects as opposed to going with something like React or Vue. This means that while Next.js is relatively lightweight compared to other frameworks, it is still too verbose for my needs.
 
 <section class="bg-gray-200 p-6 my-6">
 <p>
@@ -18,11 +18,11 @@ This doesn’t mean that everything I am working on is completely vanilla these 
 </p>
 </section>
 
-2) I thoroughly enjoy working with Tailwind which encourages styling to be added in the markup as opposed to the stylesheet. A personal pain point with React is how, when declaring classes on each component, I cannot simply use class=””, I have to use className=”” which seems a little unnecessary. Hopefully this is changed in future versions of React.
+I thoroughly enjoy working with Tailwind which encourages styling to be added in the markup as opposed to the stylesheet. A personal pain point with React is how, when declaring classes on each component, I cannot simply use class=””, I have to use className=”” which seems a little unnecessary. Hopefully this is changed in future versions of React.
 
-3) I dislike how my markdown files (which are actually .MDX files) contain code to set meta data for the post. If I am using an app to write or edit my files, I have to bring them across from the app and add the necessary code to the top of each file. (I assume that there could be a way around this but I never found one.)
+I dislike how my markdown files (which are actually .MDX files) contain code to set meta data for the post. If I am using an app to write or edit my files, I have to bring them across from the app and add the necessary code to the top of each file. (I assume that there could be a way around this but I never found one.)
 
-4) It could be down to my personal implementation, but I found it tricky working with .env files and variables I did not want to expose to the public.
+It could be down to my personal implementation, but I found it tricky working with .env files and variables I did not want to expose to the public.
 
 I initially decided to use this stack because I wanted to avoid paying monthly server costs, managing a server and worrying about deploying my updates usually associated with PHP based projects. 
 
@@ -54,13 +54,13 @@ Throughout this guide I will be using an opinionated folder structure as well as
 
 After running the above mentioned command, Hugo will generate the following directory structure:
 
-[INSERT IMAGE OF FOLDER STRUCTURE HERE]
+{{< figure src="/img/posts/folder-structure.jpg" alt="Hugo folder structure" >}}
 
 This folder structure may seem foreign at first but I can assure you that once you get accustomed to it like most things, it is relatively straight forward. 
 
 **Archetypes**: An archetype is a content template which contains a set of preconfigured frontmatter variables, you can add your own or modify them in any way that you like. For example if you would like to create a template that would be used for posts, you would add a file called posts.md in this directory. My archetype directory contains one template and that is for posts, I have the following frontmatter variables defined:
 
-[INSERT ARCHETYPE POSTS FILE IMAGE]
+{{< figure src="/img/posts/archetype-posts.jpg" alt="Hugo archetype configuration" >}}
 
 This means that each post will have a title, date and a slug.
 
@@ -98,7 +98,7 @@ My configuration file is pretty straight forward and contains some basic variabl
 
 Custom paremeters can be added to your config file, which will be available globally in your project. These are defined by adding [params] followed by each variable on a new line:
 
-[INSERT SCREENSHOT OF PARAMS]
+{{< figure src="/img/posts/config.jpg" alt="My Hugo configuration file" >}}
 
 Once these params are added you can access them throughout the site by using the following syntax, changing out the last value for the desired key.
 
@@ -134,7 +134,7 @@ $ npx tailwind init && touch postcss.config.js
 
 The first command initializes a blank Tailwind configuration file followed by creating the PostCSS configuration file.
 
-[INSERT IMAGES OF CONFIGURATION FILES]
+{{< figure src="/img/posts/postcss-config.jpg" alt="My PostCSS configuration file" >}}
 
 ## Adding Layouts:
 
@@ -150,11 +150,13 @@ The baseof.html template is the master template for the website, inside this tem
 
 This creates a block called main, which will house the content of a post or page.
 
-My baseof.html template is slightly more complex than what might suit most people so a simple layout file with blocks could look like this:
+My baseof.html template is slightly more complex than what might suit most people so a simple layout file with blocks would look like this:
 
-[INSERT IMAGE OF SIMPLE BASE TEMPLATE]
+{{< figure src="/img/posts/base.jpg" alt="A simple baseof.html template file" >}}
 
-One thing to note with the baseof.html template is that if you would like to create a custom home page, you would need to create a file with the name index.html inside the layouts directory which will serve as your home page layout.
+When working with the baseof.html template, it is important to note that should you wish to create a home page that differs from this structure, you will need to create a separate template which will override this. In order to create a home page template, create a file inside the root of the layouts directory called index.html. The markup used inside this template will be used solely for the home page.
+
+{{< figure src="/img/posts/home.jpg" alt="A simple home page template" >}}
 
 The content of this page can be pulled in via a markdown file inside the content directory which needs to have the name _index.md. If you choose to not make use of a markdown file, you can also use raw html and avoid creating an _index.md file altogether.
 
@@ -249,7 +251,7 @@ I was previously hosting my website on the Vercel platform but decided to migrat
 
 If you have worked with Netlify you might know that you can create an optional netlify.toml file which allows you to specify additional configuration options for your project. My config file is relatively straight forward:
 
-[INSERT SCREENSHOT OF NETLIFY.TOML FILE]
+{{< figure src="/img/posts/folder-structure.jpg" alt="My Netlify configuration file" >}}
 
 I specify the defaults to be used when building my project. The build command for my project is hugo followed by --minify which minifies the project at build time and I set the default publish directory to be used which is public. 
 
