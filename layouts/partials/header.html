@@ -32,7 +32,7 @@
                         {{ $active := or ($current.IsMenuCurrent "main" .) ($current.HasMenuCurrent "main" .) }}
                         {{ $active = or $active (eq .Name $current.Title) }}
                         {{ $active = or $active (and (eq .Name "Posts") (eq $current.Section "posts")) }}
-                        <a href="{{ .URL }}" class="text-gray-600 hover:underline lg:text-lg {{ if $active }}text-gray-800{{ end }}">{{ .Name }}</a>
+                        <a href="{{ .URL }}" class="text-gray-700 hover:underline lg:text-lg {{ if $active }}text-gray-900{{ end }}">{{ .Name }}</a>
                     </li>
                 {{ end }}
                 <li class="flex items-center lg:ml-3 pt-2 pb-1">
