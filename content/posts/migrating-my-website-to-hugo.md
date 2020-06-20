@@ -40,7 +40,7 @@ I predominantly work on Mac so for the purpose of this guide I will only be cove
 
 You will need to install a few things in order to get started with Hugo, the easiest way is by making use of Homebrew. The Homebrew website contains the necessary info to get started if you aren’t already making use of it. Once this is installed you can create a new Hugo site by running the following command:
 
-```bash
+```
 $ hugo new site site_name
 ```
 
@@ -62,9 +62,9 @@ This means that each post will have a title, date and a slug.
 
 To use this template, I can run the following command which will generate a new post in the content/posts directory and the frontmatter values will be populated accordingly.
 
-{{< highlight bash >}}
+```
 $ hugo new posts/new-post.md
-{{< / highlight >}}
+```
  
 **Assets**: This directory is not created by default and is used when you want the contents to be processed by Hugo’s pipes. I utilize pipes in the following way:
 
@@ -98,9 +98,9 @@ Custom paremeters can be added to your config file, which will be available glob
 
 Once these params are added you can access them throughout the site by using the following syntax, changing out the last value for the desired key.
 
-{{< highlight go >}}
+```
 {{ $.Site.Params.title }}
-{{< / highlight >}}
+```
 
 Permalinks are pretty straight forward, these options indicate what the default URL structure should be for both posts and pages.
 
@@ -116,17 +116,17 @@ Note that upon successful compilation of the project, it will generate a further
 
 I needed to add a few additional NPM packages to my project, Tailwind, PostCSS and Autoprefixer. 
 
-{{< highlight bash >}}
+```
 $ npm i tailwindcss && npm i postcss && npm i autoprefixer
-{{< / highlight >}}
+```
 
 Tailwind is used as the basis for most of my personal projects, it provides a fantastic base to work with when starting new projects. I also like to make use of PostCSS, which can be used to require a wide variety of plugins including the above mentioned Tailwind and Autoprefixer. 
 
 I initialize Tailwind and create a postcss.config.js file with the following commands:
 
-{{< highlight bash >}}
+```
 $ npx tailwind init && touch postcss.config.js 
-{{< / highlight >}}
+```
 
 The first command initializes a blank Tailwind configuration file followed by creating the PostCSS configuration file.
 
@@ -140,9 +140,9 @@ In order to create a set of default layouts, you will need to create a directory
 
 The baseof.html template is the master template for the website, inside this template you would include your head, main and footer tags, as well as any style, script or meta tags that you wish to use. Layout files include a construct called blocks, which allow you to define parts of the website such as the main content, which would then be filled with your page/post content. A block can be defined with the following syntax:
 
-{{< highlight go >}}
+```
 {{ block “main” . }} {{ end }}
-{{< / highlight >}}
+```
 
 This creates a block called main, which will house the content of a post or page.
 
@@ -156,23 +156,23 @@ The content of this page can be pulled in via a markdown file inside the content
 
 To create a page template a single.html is used to display its content, which can include optional markup if needed. My single.html simply makes use of the main block and fills it with the content of my pages as I do not need custom markup for my pages.
 
-{{< highlight go >}}
+```
 {{ define “main” }}
 {{ .Content }}
 {{ end }}
-{{< / highlight >}}
+```
 
 In my case the above mentioned file is not used as my post template because my requirements for this template are slightly more complex. In order to create a specific layout for my posts, I created a directory within layouts called posts and then added a single.html file. Creating this folder indicates that this layout is purely for the posts content type. The reason I chose to not use the default single.html is because I wanted to be able to update the meta tags, add a canonical link for each post and add some additional markup that is used purely on posts.
 
 Inside my posts template I define meta which will be used for each post, this includes twitter cards, open graph meta tags and a canonical link for my post. This meta is then injected into the <head></head> tags of my website.
 
-{{< highlight go >}}
+```
 {{ define “meta” }}
 {{ end }}
 
 {{ define “main” }}
 {{ end }}
-{{< / highlight >}}
+```
 
 In order to display a list of posts on my posts page I created a list.html template inside the layouts/posts directory. This template also includes an internal template called pagination.html. 
 
@@ -180,40 +180,40 @@ Internal templates are templates that ship with Hugo. These templates include bo
 
 To include an internal template, use the following syntax:
 
-{{< highlight go >}}
+```
 {{ template “_internal/pagination.html” .  }}
-{{< / highlight >}}
+```
 
 To make use of this pagination template, I had to create a range loop which will loop through everything with the type of posts. I created a variable called $paginator, set which content type I wanted to loop through and set the range loop to to iterate over these pages.
 
-{{< highlight go >}}
+```
 {{ $paginator := .Paginate (where .Pages “Type” “posts” ) }}
 {{ range $paginator.Pages }}
 {{ .Title }}
 {{ end }}
-{{< / highlight >}}
+```
 
 This will loop through all of the content inside my posts directory and output the titles of each post which is specified in the frontmatter variables. The default pagination value is set to 10 by Hugo which can be overridden inside the config.toml file by adding a paginate variable followed by your desired value:
 
-{{< highlight toml >}}
+```
 Paginate: 5
-{{< / highlight >}}
+```
 
 The final layout which I created was a custom 404.html template which follows the same structure as a single.html template. This template is used when a user attempts to visit a broken link or a link that does not exist. 
 
-{{< highlight go >}}
+```
 {{ define “main” }}
 <h1>Oops!</h1>
 {{ end }}
-{{< / highlight >}}
+```
 
 ## Adding Partials:
 
 A partial is a file that is used to include something on a page, this could be anything from a newsletter signup form or a header/footer etc. Partials are generally used for components that are reused throughout the site and serves as a handy method to avoid duplicate code. Partials can be created by adding a partials directory inside the layouts directory. Once you have created your partial, you can include that file by using the following syntax in the desired location of your project:
 
-{{< highlight go >}}
+```
 {{ partial “header.html” . }}
-{{< / highlight >}}
+```
 
 ## Adding Page Content:
 
@@ -221,13 +221,13 @@ Page content is pulled into layouts via a variety of data sources, the most comm
 
 Hugo allows pages to specify frontmatter variables at the top of the file, which follow the same format as markdown:
 
-{{< highlight markdown >}}
+```
 ---
 title: “About”
 menu: main
 weight: 1
 ---
-{{< / highlight >}}
+```
 
 The above syntax specifies the page has the title of “About”, it is visible inside the main menu and specifies a weight of 1. Weighting is used to specify the order of the pages in the navigation menu, this means that if you add an additional page with the weight of 2, it will be displayed after the “About” page. 
 

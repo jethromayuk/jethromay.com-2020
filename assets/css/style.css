@@ -25,7 +25,7 @@ p {
 }
 
 pre {
-    @apply leading-normal p-6
+    @apply leading-normal pb-6 pt-3
 }
 
 blockquote {
