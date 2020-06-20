@@ -24,12 +24,20 @@ p {
     @apply leading-relaxed text-lg
 }
 
-pre {
+main p:not(:last-child) {
+    @apply mb-4
+}
+
+pre + h1, h2, p {
+    @apply mt-4
+}
+
+pre:not + blockquote {
     @apply leading-normal pb-6 pt-3
 }
 
 blockquote {
-    @apply bg-gray-200 p-6 my-6 italic
+    @apply bg-gray-200 p-6 my-6
 }
 
 figure {
@@ -38,10 +46,6 @@ figure {
 
 img {
     @apply w-full
-}
-
-main p:not(:last-child) {
-    @apply mb-4
 }
 
 #posts article:not(:only-child):not(:last-child) {
