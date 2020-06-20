@@ -5,9 +5,9 @@
         {{ range $paginator.Pages }}
         <article>
             <header class="mb-4">
-                <h1 class="text-3xl mb-0 mr-3">
+                <h2 class="text-3xl mb-0 mr-3">
                     <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-                </h1>
+                </h2>
                 <p class="text-sm text-gray-600 mb-6">
                     <time>
                         {{ .PublishDate.Format "January 2, 2006" }}
