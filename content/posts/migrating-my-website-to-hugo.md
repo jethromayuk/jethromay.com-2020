@@ -38,6 +38,10 @@ I predominantly work on Mac so for the purpose of this tutorial I will not be co
 
 In order to get started with Hugo, the easiest way is by making use of [Homebrew](https://brew.sh/).
 
+```
+$ brew install hugo
+```
+
 Once this is installed you can create a new Hugo project by running the following command:
 
 ```
