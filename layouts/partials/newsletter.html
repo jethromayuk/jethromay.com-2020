@@ -13,12 +13,16 @@
 <script>
     const newsletter = document.querySelector('form');
     const messageDiv = document.getElementById('message');
+    const button = document.querySelector('form button');
 
     if (newsletter) {
         newsletter.addEventListener('submit', e => {
             e.preventDefault();
             let email = document.getElementById('email').value;
             submitEmail(email);
+
+            button.innerHTML = 'Subscribing..';
+            button.setAttribute('disabled', true);
         })
     }
 
@@ -34,6 +38,7 @@
         })
         .then(response => response.text())
         .then(body => {
+            console.log(body)
             try {
                 messageDiv.innerText = body;
                 messageDiv.classList.add('text-green-400');
@@ -41,6 +46,9 @@
                 messageDiv.innerText = body;
                 messageDiv.classList.add('text-red-400');
             }
+
+            button.innerHTML = 'Subscribe';
+            button.removeAttribute('disabled');
         });
     }
 </script>
