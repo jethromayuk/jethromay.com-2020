@@ -24,9 +24,9 @@ p {
     @apply leading-relaxed text-lg
 }
 
-a {
-    @apply text-blue-700
-}
+/*a {*/
+/*    @apply text-blue-700*/
+/*}*/
 
 main p:not(:last-child) {
     @apply mb-4
