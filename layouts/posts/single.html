@@ -23,7 +23,7 @@
             <p class="text-sm text-gray-600 mb-6 mr-2">
                 Published
                 <time>{{ .Date.Format "January 2, 2006" }}</time>
-                <span style="margin: 2px 0;">&bull;</span> {{ math.Round (div (countwords .Content) 220.0) }} min read
+                <span style="margin: 0 2px;">&bull;</span> {{ math.Round (div (countwords .Content) 220.0) }} min read
             </p>
         </header>
         {{ .Content }}
