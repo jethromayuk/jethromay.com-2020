@@ -21,8 +21,8 @@
         <header>
             <h1 class="font-bold leading-tight xs:text-3xl text-5xl mb-0">{{ .Title }}</h1>
             <p class="text-sm text-gray-600 mb-6 mr-2">
-                Published &nbsp;<time>{{ .Date.Format "January 2, 2006" }}</time> &nbsp;&bull;&nbsp;
-                    {{ math.Round (div (countwords .Content) 220.0) }} min read
+                <time>{{ .Date.Format "January 2, 2006" }}</time> &nbsp;&bull;&nbsp;
+                {{ math.Round (div (countwords .Content) 220.0) }} min read
             </p>
         </header>
         {{ .Content }}
