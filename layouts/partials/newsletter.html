@@ -30,6 +30,7 @@
         fetch('/.netlify/functions/subscribe', {
             method: 'POST',
             headers: {
+                'Accept': 'application/json',
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
@@ -37,14 +38,14 @@
             })
         })
         .then(response => response.text())
-        .then(body => {
-            console.log(body)
-            try {
-                messageDiv.innerText = body;
-                messageDiv.classList.add('text-green-400');
-            } catch {
-                messageDiv.innerText = body;
+        .then(result => {
+
+            if(!result.ok) {
+                messageDiv.innerText = result;
                 messageDiv.classList.add('text-red-400');
+            } else {
+                messageDiv.innerText = result;
+                messageDiv.classList.add('text-green-400');
             }
 
             button.innerHTML = 'Subscribe';
