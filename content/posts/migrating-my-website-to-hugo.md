@@ -10,7 +10,7 @@ During the last 12 months I have gone through various iterations of my website, 
 
 First and foremost I have come to the realisation that I much prefer working with static HTML, CSS and a sprinkling of JavaScript where needed, returning to the basics that made the web so wonderful in the first place. It enables me to quickly scaffold projects without worrying about the complexity of React, Vue or other frameworks. This means that while Next.js is relatively lightweight compared to other frameworks, it is still too verbose for my needs.
 
-> This doesn’t mean that everything I am working on is completely vanilla these days. During my day job at <a href="https://plusnarrative.com/" class="text-lg text-blue-700" target="_blank">PlusNarrative</a> we primarily build PHP based projects in Laravel and WordPress. The former being a framework that I am extremely passionate about. In my personal projects I work with a variety of languages/frameworks such as PHP, Laravel, Go, JavaScript, Alpine.js, Livewire and last but certainly not least Tailwind.
+> This doesn’t mean that everything I am working on is completely vanilla these days. During my day job at [PlusNarrative](https://plusnarrative.com/) we primarily build PHP based projects in Laravel and WordPress. The former being a framework that I am extremely passionate about. In my personal projects I work with a variety of languages/frameworks such as PHP, Laravel, Go, JavaScript, Alpine.js, Livewire and last but certainly not least Tailwind.
 
 I thoroughly enjoy working with Tailwind which encourages styling to be added in the markup as opposed to the stylesheet. A personal pain point with React is how, when declaring classes on each component, I cannot simply use class="", I have to use className="" which seems a little unnecessary. Hopefully this is changed in future versions of React.
 
@@ -22,7 +22,7 @@ I initially decided to use this stack because I wanted to avoid paying monthly s
 
 It became a tedious task to work with the current setup, update it and plan future additions to the website let alone write content. I wanted to enjoy working on my website again and create content other people from around the world would hopefully find valuable. 
 
-## Enter <a href="https://gohugo.io/" target="_blank" class="text-blue-700">Hugo</a>.
+## Enter [Hugo](https://gohugo.io/).
 
 Over the past few months I have been casually learning Go, simply because I wanted to learn a language that was completely different from what I am used to, PHP. After going down this path I began seeing a buzz around a framework called Hugo and found out that it is a static site generator built on top of Go. My interest was piqued. Upon landing on the homepage I noticed Hugo’s bold claim to be, and I quote:
 
@@ -30,13 +30,13 @@ Over the past few months I have been casually learning Go, simply because I want
 >
 > Hugo is one of the most popular open-source static site generators. With its amazing speed and flexibility, Hugo makes building websites fun again.
 
-In a nutshell this is exactly what I wanted, a framework that is incredibly fast, flexible and most importantly makes working on my website fun again. I already knew how fast Go projects were, but after further research followed by watching their speed benchmark <a class="text-blue-700" href="https://www.youtube.com/watch?v=CdiDYZ51a2o&feature=emb_title" target="_blank">video</a>, I was blown away. I finally settled on the idea of migrating my existing website to this framework.
+In a nutshell this is exactly what I wanted, a framework that is incredibly fast, flexible and most importantly makes working on my website fun again. I already knew how fast Go projects were, but after further research followed by watching their speed benchmark [video](https://www.youtube.com/watch?v=CdiDYZ51a2o&feature=emb_title), I was blown away. I finally settled on the idea of migrating my existing website to this framework.
 
 ## Setup:
 
 I predominantly work on Mac so for the purpose of this tutorial I will not be covering Windows or Linux implementations. This tutorial will not cover every aspect of Hugo, but it will go through the various steps I took when setting up my project.
 
-In order to get started with Hugo, the easiest way is by making use of <a class="text-blue-700" href="https://brew.sh/" target="_blank">Homebrew</a>.
+In order to get started with Hugo, the easiest way is by making use of [Homebrew](https://brew.sh/).
 
 Once this is installed you can create a new Hugo project by running the following command:
 
@@ -44,7 +44,7 @@ Once this is installed you can create a new Hugo project by running the followin
 $ hugo new site site_name
 ```
 
-There are many other helpful commands that can be used in Hugo projects which can be found <a class="text-blue-700" href="https://gohugo.io/commands/" target="_blank">here</a>.
+There are many other helpful commands that can be used in Hugo projects which can be found [here](https://gohugo.io/commands/).
 
 Throughout this tutorial I will be using an opinionated folder structure as well as personal practices that I make use of when building projects.
 
@@ -56,7 +56,7 @@ After running the command to create a new project, Hugo will generate the follow
 
 This folder structure may seem foreign at first, but I can assure you that once you get accustomed to it like most things, it is relatively straight forward. 
 
-**Archetypes**: An archetype is a content template which contains a set of preconfigured <a class="text-blue-700" href="https://gohugo.io/content-management/front-matter/" target="_blank">frontmatter</a> variables, you can add your own or modify them in any way that you see fit. For example if you would like to create a frontmatter template that would be used for posts, you would add a file called posts.md in the archetypes directory. When Hugo creates a post it will use the variables specified in this file.
+**Archetypes**: An archetype is a content template which contains a set of preconfigured [frontmatter](https://gohugo.io/content-management/front-matter/) variables, you can add your own or modify them in any way that you see fit. For example if you would like to create a frontmatter template that would be used for posts, you would add a file called posts.md in the archetypes directory. When Hugo creates a post it will use the variables specified in this file.
 
 My archetype directory contains one template for posts, which has the following frontmatter variables defined:
 
@@ -80,13 +80,13 @@ This command creates a new post in the content/posts directory with the frontmat
 
 **Static**: The static directory is pretty straight forward, it stores static assets for your website, such as CSS, JS and images. The content of this directory is stored as is, so Hugo won’t modify it.
 
-**Assets**: Hugo does not generate this directory by default. If you would like CSS/JS assets processed by Hugo’s <a class="text-blue-700" href="https://gohugo.io/hugo-pipes/" target="_blank">pipes</a>, you may create this directory. I utilize pipes in the following way:
+**Assets**: Hugo does not generate this directory by default. If you would like CSS/JS assets processed by Hugo’s [pipes](https://gohugo.io/hugo-pipes/), you may create this directory. I utilize pipes in the following way:
 
 I retrieve the content of the stylesheet, which then passes it through PostCSS which will apply my browser prefixes and minify the output. Once minified, the CSS is injected into a style tag within the head tags of my website.
 
 Note: Using the assets' directory is optional, I created it so that I could make use of the above mentioned process.
 
-**Config.toml**: The basic configuration for the project will be stored within this file. It can also be created in a number of formats such as JSON or YAML but the concept remains the same. There is a wide variety of <a class="text-blue-700" href="https://gohugo.io/getting-started/configuration/#all-configuration-settings" target="_blank">directives</a> that ship with Hugo which can be used that will enable you to fine tune your environment. Most projects will have a single config file which will reside inside the root of the project but for larger projects you can create a config directory which could contain multiple config files for various purposes or environments such as staging and production.
+**Config.toml**: The basic configuration for the project will be stored within this file. It can also be created in a number of formats such as JSON or YAML but the concept remains the same. There is a wide variety of [directives](https://gohugo.io/getting-started/configuration/#all-configuration-settings) that ship with Hugo which can be used that will enable you to fine tune your environment. Most projects will have a single config file which will reside inside the root of the project but for larger projects you can create a config directory which could contain multiple config files for various purposes or environments such as staging and production.
 
 My configuration file is pretty straight forward and contains some basic variables that I use throughout the site:
 
@@ -231,7 +231,8 @@ weight: 1
 
 The above syntax indicates that the title of the page is "About", it is visible inside the main menu and specifies a weight of 1. 
 
-> <a class="text-blue-700" href="https://gohugo.io/templates/lists/#by-weight" target="_blank">Weighting</a> will be used to specify the order of the pages in the navigation menu, this means that if you add additional pages with the weight of 2, it will be displayed after the "About" page. 
+> [Weighting](https://gohugo.io/templates/lists/#by-weight) 
+>will be used to specify the order of the pages in the navigation menu, this means that if you add additional pages with the weight of 2, it will be displayed after the "About" page. 
 
 Directly below the frontmatter variables will be the page content, this can be in the form of plain text using markdown syntax or HTML.
 
@@ -243,7 +244,7 @@ A key difference with posts and pages is the frontmatter variables. It is consid
 
 ## Deploying to Netlify:
 
-The final step was to deploy this website to <a class="text-blue-700" href="https://www.netlify.com/" target="_blank">Netlify</a>. I was previously hosting my website on the Vercel platform but decided to migrate back to Netlify simply because I find the platform to be more user and developer friendly. Netlify also offers a whole host of features that Vercel does not, such as <a class="text-blue-700" href="https://docs.netlify.com/configure-builds/build-plugins/" target="_blank">build plugins</a>, <a class="text-blue-700" href="https://www.netlify.com/products/analytics/" target="_blank">analytics</a> and more. 
+The final step was to deploy this website to Netlify. I was previously hosting my website on the Vercel platform but decided to migrate back to Netlify simply because I find the platform to be more user and developer friendly. Netlify also offers a whole host of features that Vercel does not, such as [build plugins](https://docs.netlify.com/configure-builds/build-plugins/), [analytics](https://www.netlify.com/products/analytics/) and more. 
 
 If you have worked with Netlify you might know that you can create an optional netlify.toml file which allows you to specify additional configuration options for your project. My config file is relatively straight forward:
 
