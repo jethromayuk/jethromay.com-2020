@@ -24,7 +24,9 @@
                 <time>{{ .Date.Format "January 2, 2006" }}</time> &bull; {{ math.Round (div (countwords .Content) 220.0) }} min read
             </p>
         </header>
-        {{ .Content }}
+        <div class="content">
+            {{ .Content }}
+        </div>
         <footer>
             <h2 class="mt-8">
                 Did you enjoy this post?
