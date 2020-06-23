@@ -22,10 +22,10 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jethromay/jethromay.com-new.git"
+    "url": "git+https://github.com/jethromay/jethromay.com.git"
   },
   "bugs": {
-    "url": "https://github.com/jethromay/jethromay.com-new/issues"
+    "url": "https://github.com/jethromay/jethromay.com/issues"
   },
-  "homepage": "https://github.com/jethromay/jethromay.com-new#readme"
+  "homepage": "https://github.com/jethromay/jethromay.com#readme"
 }
