@@ -21,10 +21,7 @@
                         </h2>
                     </div>
                     <p class="text-sm text-gray-600 mb-6 mt-1">
-                        <time>
-                            {{ .PublishDate.Format "January 2, 2006" }}
-                        </time>
-                        <span style="margin: 0 4px;">&bull;</span> {{ math.Round (div (countwords .Content) 220.0) }} min read
+                        <time>{{ .PublishDate.Format "January 2, 2006" }}</time> &nbsp;&bull;&nbsp;{{ math.Round (div (countwords .Content) 220.0) }} min read
                     </p>
                 </header>
                 <p>
