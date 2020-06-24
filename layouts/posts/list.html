@@ -1,5 +1,5 @@
 {{ define "main" }}
-    <section class="md:mt-20" id="posts">
+    <section class="md:mt-20" id="archive">
         <h1 class="xs:text-4xl">{{ .Title }}</h1>
         {{ $paginator := .Paginate (where .Pages "Type" "posts") }}
         {{ range $paginator.Pages }}

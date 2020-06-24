@@ -60,6 +60,10 @@ img {
     @apply border-b-2 pb-12 mb-6
 }
 
+#archive article:not(:only-child):not(:last-child) {
+    @apply border-b-2 pb-12 mb-10
+}
+
 button:disabled,
 button[disabled] {
     @apply opacity-50 cursor-not-allowed
