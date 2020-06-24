@@ -2,7 +2,6 @@
 title: "2020 Website Refresh"
 description: "With the advent of 2020, I decided that it was time to launch a brand-new website"
 date: 2020-01-03
-publishdate: 2020-01-03
 slug: 2020-website-refresh
 ---
 
