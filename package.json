@@ -6,10 +6,10 @@
     "postinstall": "netlify-lambda install"
   },
   "dependencies": {
-    "node-fetch": "^2.6.0",
-    "autoprefixer": "^9.8.0",
-    "netlify-cli": "^2.52.0",
+    "autoprefixer": "^9.8.4",
+    "netlify-cli": "^2.57.0",
     "netlify-lambda": "^1.6.3",
+    "node-fetch": "^2.6.0",
     "postcss": "^7.0.31",
     "postcss-cli": "^7.1.1",
     "tailwindcss": "^1.4.6"

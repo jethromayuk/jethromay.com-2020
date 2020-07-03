@@ -48,6 +48,10 @@ blockquote {
     @apply bg-gray-200 p-6 my-6
 }
 
+blockquote p {
+    @apply mt-0
+}
+
 figure {
     @apply my-6
 }
