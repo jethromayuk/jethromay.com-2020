@@ -57,7 +57,7 @@ figure {
 }
 
 img {
-    @apply w-full
+    @apply w-full shadow-lg
 }
 
 #posts article:not(:only-child):not(:last-child) {
