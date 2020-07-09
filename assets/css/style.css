@@ -44,7 +44,7 @@ pre:not + blockquote {
     @apply leading-normal pb-6 pt-3
 }
 
-blockquote {
+blockquote, .highlight {
     @apply bg-gray-200 p-6 my-6
 }
 

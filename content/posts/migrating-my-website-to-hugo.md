@@ -9,7 +9,9 @@ During the last 12 months I have gone through various iterations of my website, 
 
 First and foremost I have come to the realisation that I much prefer working with static HTML, CSS and a sprinkling of JavaScript where needed, returning to the basics that made the web so wonderful in the first place. It enables me to quickly scaffold projects without worrying about the complexity of React, Vue or other frameworks. This means that while Next.js is relatively lightweight compared to other frameworks, it is still too verbose for my needs.
 
-> This doesn’t mean that everything I am working on is completely vanilla these days. During my day job at [PlusNarrative](https://plusnarrative.com/) we primarily build PHP based projects in Laravel and WordPress. The former being a framework that I am extremely passionate about. In my personal projects I work with a variety of languages/frameworks such as PHP, Laravel, Go, JavaScript, Alpine.js, Livewire and last but certainly not least Tailwind.
+<p class="highlight">
+This doesn’t mean that everything I am working on is completely vanilla these days. During my day job at <a href="https://plusnarrative.com/">PlusNarrative</a> we primarily build PHP based projects in Laravel and WordPress. The former being a framework that I am extremely passionate about. In my personal projects I work with a variety of languages/frameworks such as PHP, Laravel, Go, JavaScript, Alpine.js, Livewire and last but certainly not least Tailwind.
+</p>
 
 I thoroughly enjoy working with Tailwind which encourages styling to be added in the markup as opposed to the stylesheet. A personal pain point with React is how, when declaring classes on each component, I cannot simply use class="", I have to use className="" which seems a little unnecessary. Hopefully this is changed in future versions of React.
 
@@ -102,12 +104,6 @@ Once these params are added you can access them throughout the project by using 
 ```
 {{ $.Site.Params.title }}
 ```
-
-> When building your project, Hugo will create two further directories:
->
-> **Resources**: Hugo caches certain aspects of your website to speed up generation, such as images and css files.
->
-> **Public**: This will contain the production build of your project, which will be used to serve your website to the web.
 
 ## Additional Setup:
 
@@ -234,8 +230,10 @@ weight: 1
 
 The above syntax indicates that the title of the page is "About", it is visible inside the main menu and specifies a weight of 1. 
 
-> [Weighting](https://gohugo.io/templates/lists/#by-weight) 
->will be used to specify the order of the pages in the navigation menu, this means that if you add additional pages with the weight of 2, it will be displayed after the "About" page. 
+<p class="highlight">
+    <a href="https://gohugo.io/templates/lists/#by-weight">Weighting</a> will be used to specify the order of the pages in the navigation menu, this means that if you add additional pages with the weight of 2, it will be displayed after the "About" page. 
+</p>
+
 
 Directly below the frontmatter variables will be the page content, this can be in the form of plain text using markdown syntax or HTML.
 
