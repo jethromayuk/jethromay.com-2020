@@ -44,6 +44,10 @@ pre:not + blockquote {
     @apply leading-normal pb-6 pt-3
 }
 
+blockquote {
+    @apply border-l-2 bg-blue-700
+}
+
 blockquote, .highlight {
     @apply bg-gray-200 p-6 my-6
 }
@@ -57,11 +61,15 @@ figure {
 }
 
 img {
-    @apply w-full
+    @apply max-w-full
 }
 
 figure img {
     @apply shadow-lg
+}
+
+figcaption {
+    @apply text-base p-4
 }
 
 #posts article:not(:only-child):not(:last-child) {

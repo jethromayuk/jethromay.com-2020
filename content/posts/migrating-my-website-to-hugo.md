@@ -57,7 +57,7 @@ Throughout this tutorial I will be using an opinionated folder structure as well
 
 After running the command to create a new project, Hugo will generate the following directory structure:
 
-{{< figure src="/img/posts/folder-structure.jpg" alt="Hugo folder structure" >}}
+{{< figure src="/img/posts/folder-structure.jpg" alt="Hugo folder structure" caption="Hugo folder structure" >}}
 
 This folder structure may seem foreign at first, but I can assure you that once you get accustomed to it like most things, it is relatively straight forward. 
 
@@ -65,7 +65,7 @@ This folder structure may seem foreign at first, but I can assure you that once 
 
 My archetype directory contains one template for posts, which has the following frontmatter variables defined:
 
-{{< figure src="/img/posts/archetype-posts.jpg" alt="Hugo archetype configuration" >}}
+{{< figure src="/img/posts/archetype-posts.jpg" alt="Hugo archetype configuration" caption="Hugo archetype configuration" >}}
 
 This means that each post will have a title, date and a slug.
 
@@ -95,7 +95,7 @@ Note: Using the assets' directory is optional, I created it so that I could make
 
 My configuration file is pretty straight forward and contains some basic variables that I use throughout the site:
 
-{{< figure src="/img/posts/config.jpg" alt="My Hugo configuration file" >}}
+{{< figure src="/img/posts/config.jpg" alt="My Hugo configuration file" caption="My Hugo configuration file" >}}
 
 Custom parameters can be added to your config file, which will be available globally in your project. These are defined by adding [params] followed by each variable on a new line.
 
@@ -123,7 +123,7 @@ The first command initializes a blank Tailwind configuration file followed by cr
 
 Once this is created I add the following:
 
-{{< figure src="/img/posts/postcss-config.jpg" alt="My PostCSS configuration file" >}}
+{{< figure src="/img/posts/postcss-config.jpg" alt="My PostCSS configuration file" caption="My PostCSS configuration file" >}}
 
 ## Adding Layouts:
 
@@ -145,13 +145,13 @@ This creates a block called main, which will house the content of a post or page
 
 My baseof.html template is slightly more complex than what might suit most people, a simpler baseof.html file with blocks could look like this:
 
-{{< figure src="/img/posts/base.jpg" alt="A simple baseof.html template file" >}}
+{{< figure src="/img/posts/base.jpg" alt="A simple baseof.html template file" caption="A simple baseof.html template file" >}}
 
 When working with the baseof.html template, it is important to note that should you wish to create a home page that differs from this structure, you will need to create a separate template which will override this. 
 
 In order to create a home page template, create a file inside the root of the layouts' directory called index.html. The markup used inside this template will be used solely for the home page.
 
-{{< figure src="/img/posts/home.jpg" alt="A simple home page template" >}}
+{{< figure src="/img/posts/home.jpg" alt="A simple home page template" caption="A simple home page template" >}}
 
 The content of this page can be pulled in via a markdown file inside the content directory. I chose to use markdown, so I created a file named _index.md. If you choose to not make use of a markdown file, you can also use HTML and avoid creating an _index.md file altogether.
 
@@ -249,7 +249,7 @@ The final step was to deploy this website to Netlify. I was previously hosting m
 
 If you have worked with Netlify you might know that you can create an optional netlify.toml file which allows you to specify additional configuration options for your project. My config file is relatively straight forward:
 
-{{< figure src="/img/posts/netlify.jpg" alt="My Netlify configuration file" >}}
+{{< figure src="/img/posts/netlify.jpg" alt="My Netlify configuration file" caption="My Netlify configuration file" >}}
 
 I specify the defaults to be used when building my project. The build command for my project is hugo followed by --minify which will minify the project at build time, and I set the default publish directory to be used which is public. 
 
