@@ -45,7 +45,7 @@ pre:not + blockquote {
 }
 
 blockquote {
-    @apply border-l-2 bg-blue-700
+    @apply border-l-4 border-gray-400
 }
 
 blockquote, .highlight {
