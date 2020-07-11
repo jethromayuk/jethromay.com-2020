@@ -33,7 +33,7 @@ main p:not(:last-child) {
 }
 
 pre {
-    @apply text-justify whitespace-pre-wrap break-words
+    @apply shadow p-4 text-justify whitespace-pre-wrap break-words
 }
 
 pre + h1, h2, p {
@@ -119,6 +119,6 @@ button[disabled] {
 
 @media screen and (min-width: 1280px) {
     .container {
-        max-width: 860px;
+        max-width: 960px;
     }
 }
