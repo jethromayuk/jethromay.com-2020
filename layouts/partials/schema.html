@@ -1,24 +1,25 @@
 <script type="application/ld+json">
-    {
-        "@context" : "http://schema.org",
-        "@type" : "BlogPosting",
-        "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": "{{ .Site.BaseURL }}"
-        },
-        "name" : "{{ .Title }}",
-        "headline" : "{{ .Title }}",
-        "description" : "{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}",
-        "inLanguage" : "{{ .Lang }}",
-        "author" : "{{ range .Site.Author }}{{ . }}{{ end }}",
-        "creator" : "{{ range .Site.Author }}{{ . }}{{ end }}",
-        "publisher": "{{ range .Site.Author }}{{ . }}{{ end }}",
-        "accountablePerson" : "{{ range .Site.Author }}{{ . }}{{ end }}",
-        "copyrightHolder" : "{{ range .Site.Author }}{{ . }}{{ end }}",
-        "copyrightYear" : "{{ .Date.Format "2006" }}",
-        "datePublished": "{{ .Date | safeHTML }}",
-        "dateModified" : "{{ .Date | safeHTML }}",
-        "url" : "{{ .Permalink }}",
-        "wordCount" : "{{ .WordCount }}",
-    }
+{
+    "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "{{ .Site.BaseURL }}"
+    },
+    "articleSection" : "{{ .Section }}",
+    "name" : "{{ .Title }}",
+    "headline" : "{{ .Title }}",
+    "description" : "{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}",
+    "inLanguage" : "{{ .Lang }}",
+    "author" : "{{ range .Site.Author }}{{ . }}{{ end }}",
+    "creator" : "{{ range .Site.Author }}{{ . }}{{ end }}",
+    "publisher": "{{ range .Site.Author }}{{ . }}{{ end }}",
+    "accountablePerson" : "{{ range .Site.Author }}{{ . }}{{ end }}",
+    "copyrightHolder" : "{{ range .Site.Author }}{{ . }}{{ end }}",
+    "copyrightYear" : "{{ .Date.Format "2006" }}",
+    "datePublished": "{{ .Date | safeHTML }}",
+    "dateModified" : "{{ .Date | safeHTML }}",
+    "url" : "{{ .Permalink }}",
+    "wordCount" : "{{ .WordCount }}"
+}
 </script>
