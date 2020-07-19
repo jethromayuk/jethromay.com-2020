@@ -1,0 +1,39 @@
+<script type="application/ld+json">
+    {{ if eq .Section "posts" }}
+    {
+        "@context" : "http://schema.org",
+        "@type" : "BlogPosting",
+        "headline" : "{{ .Title }}",
+        "description" : "{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}",
+        "datePublished": "{{ .Date | safeHTML }}",
+        "dateModified" : "{{ .Date | safeHTML }}",
+        "author" : {
+        "@type": "Person",
+        "name": {{ range .Site.Author }}{{ . }}{{ end }}
+        },
+        "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "{{ .Site.BaseURL }}"
+        },
+        "name" : "{{ .Title }}",
+        "inLanguage" : "{{ .Lang }}",
+        "creator" : "{{ range .Site.Author }}{{ . }}{{ end }}",
+        "publisher": "{{ range .Site.Author }}{{ . }}{{ end }}",
+        "accountablePerson" : "{{ range .Site.Author }}{{ . }}{{ end }}",
+        "copyrightHolder" : "{{ range .Site.Author }}{{ . }}{{ end }}",
+        "copyrightYear" : "{{ .Date.Format "2006" }}",
+        "url" : "{{ .Permalink }}",
+        "wordCount" : "{{ .WordCount }}"
+    }
+    {{ end }}
+    {
+        "@context" : "http://schema.org",
+        "@type" : "Organization",
+        "name" : "{{ .Title }}",
+        "url": {{ .Site.BaseURL }},
+        "sameAs": [
+            "https://twitter.com/may_jethro",
+            "https://github.com/jethromay"
+        ]
+    }
+</script>

@@ -16,6 +16,10 @@ unsafe= true
     title = "Full-stack web developer & writer."
     description = "Jethro May is a full-stack web developer & writer with a passion for Laravel."
 
+[sitemap]
+    changefreq = "weekly"
+    priority = 0.5
+
 [permalinks]
     posts = "/posts/:slug"
     page = "/:slug/"
