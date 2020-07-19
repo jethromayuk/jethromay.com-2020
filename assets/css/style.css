@@ -24,6 +24,10 @@ p {
     @apply leading-relaxed text-lg
 }
 
+ol {
+    @apply list-decimal list-inside
+}
+
 article .content a {
     @apply text-blue-700
 }
@@ -70,6 +74,10 @@ figure img {
 
 figcaption {
     @apply text-base p-4
+}
+
+p > img {
+    @apply max-w-xs
 }
 
 #posts article:not(:only-child):not(:last-child) {
