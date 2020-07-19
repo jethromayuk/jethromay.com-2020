@@ -1,15 +1,15 @@
 ---
 title: "Get Down With Markdown"
-description: "In this tutorial I will cover some basic syntax used inside markdown files which will allow you to start creating beautiful documentation, guides or posts."
+description: "In this tutorial I will cover some basic syntax used inside markdown files which will allow you to start creating beautifully structured content."
 date: 2020-07-19T12:58:51+02:00
 slug: get-down-with-markdown
 ---
 
-Most developers will encounter markdown files at some stage of their careers, via repository platforms such as GitHub or Bitbucket. Markdown files use the `.md` file extension and will contain specific syntax used to construct the document. Many content management systems and frameworks support markdown out the box, so to start using it is as simple as creating a file and adding its content. 
+Most developers will encounter Markdown files at some stage of their careers, via repository platforms such as GitHub or Bitbucket. Markdown files use the `.md` file extension and will contain specific syntax used to construct the file. Many content management systems and frameworks support markdown out the box, so to start using it is as simple as creating a file and adding its content. 
 
-Markdown files are extremely useful and powerful because it allows the creator the ability to easily construct beautiful and semantic markup without having to build it with code. They are often used inside git repositories as documentation but have also grown to be extremely popular on blogging platforms. I personally store my posts on GitHub which Hugo then turns into semantic HTML.
+Markdown files are extremely powerful because it allows the creator the ability to easily construct beautiful and semantic markup without having to build it with code. They are often used inside git repositories as documentation but have also grown to be extremely popular on blogging platforms. I personally store my posts on [GitHub](https://github.com/jethromay/) which [Hugo](https://gohugo.io/) then turns into semantic HTML.
 
-In this tutorial I will cover some basic syntax used inside markdown files which will allow you to start creating beautiful documentation, guides or posts.
+In this tutorial I will cover some basic syntax used inside Markdown files which will allow you to start creating beautifully structured content.
 
 ## Headings:
 
@@ -24,7 +24,7 @@ Headings will be represented by adding a # symbol before the title. The number o
 
 ## Paragraphs:
 
-There is no specific syntax used when writing paragraphs in markdown syntax. Paragraphs are created by adding one or more blank lines:
+There is no specific syntax used when writing paragraphs in markdown syntax. Paragraphs can be created by adding one or more blank lines:
 
     I am a paragraph.
     
@@ -53,7 +53,7 @@ Or by using a double underscore on either side of the word or phrase:
 
 ## Italic text:
 
-The syntax for italic text is similar to that of bold text. A single asterisk or underscore is used on either side of the text or phrase.
+The syntax for italic text is similar to that of bold text. A single asterisk or underscore will be used on either side of the text or phrase.
 
 `*Italic text*` will render: *Italic text* 
 
@@ -132,7 +132,7 @@ Using the above syntax is especially useful for email addresses:
 
 ## Images:
 
-Images have a similar syntax to links, except they have an exclamation mark in front, followed by the alt text in square brackets and the path to the image in parentheses.
+Images have a similar syntax to links, except they have an exclamation mark in front of the square brackets, followed by the alt text inside the square brackets and the path to the image in parentheses.
 
     ![Alt text](/posts/get-down-with-markdown/image-1.jpg
 
@@ -180,7 +180,7 @@ Any of the above will render:
 
 ## HTML:
 
-Some markdown applications or frameworks allow you to insert HTML tags into the file. This is useful if you would like to use certain HTML tags instead of Markdown syntax. Using this approach it is much easier to change the attributes of the element.
+Some Markdown applications or frameworks allow you to insert HTML tags into the file. This is useful if you would like to use certain HTML tags instead of Markdown syntax. Using this approach it is much easier to change the attributes of an element.
 
     I am using regular **bold** syntax with an HTML link <a href="#" class="text-blue-100">Link</a> 
     
