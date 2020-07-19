@@ -7,7 +7,7 @@ slug: get-down-with-markdown
 
 Most developers will encounter Markdown files at some stage of their careers, via repository platforms such as GitHub or Bitbucket. Markdown files use the `.md` file extension and will contain specific syntax used to construct the file. Many content management systems and frameworks support markdown out the box, so to start using it is as simple as creating a file and adding its content. 
 
-Markdown files are extremely powerful because it allows the creator the ability to easily construct beautiful and semantic markup without having to build it with code. They are often used inside git repositories as documentation but have also grown to be extremely popular on blogging platforms. I personally store my posts on [GitHub](https://github.com/jethromay/) which [Hugo](https://gohugo.io/) then turns into semantic HTML.
+Markdown files are extremely powerful because it allows the creator the ability to easily construct beautiful and semantic markup without having to build it with code. They are often used inside git repositories as documentation but have also grown to be extremely popular on blogging platforms. I personally store my posts on [GitHub](https://github.com/jethromay/jethromay.com/) which [Hugo](https://gohugo.io/) then turns into semantic HTML.
 
 In this tutorial, I will cover some basic syntax used inside Markdown files which will allow you to start creating beautifully structured content.
 
