@@ -1,7 +1,3 @@
-# Add 'repo' label to any root file changes
-repo:
-  - ./*
-
 # Add 'static' label to any change to static files
 static:
   - any: 'static/**/*'
