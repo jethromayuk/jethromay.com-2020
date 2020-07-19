@@ -8,12 +8,12 @@
         "datePublished": "{{ .Date | safeHTML }}",
         "dateModified" : "{{ .Date | safeHTML }}",
         "author" : {
-        "@type": "Person",
-        "name": {{ range .Site.Author }}{{ . }}{{ end }}
+            "@type": "Person",
+            "name": {{ range .Site.Author }}{{ . }}{{ end }}
         },
         "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "{{ .Site.BaseURL }}"
+        "@id": "{{ .Site.BaseURL }}",
         },
         "name" : "{{ .Title }}",
         "inLanguage" : "{{ .Lang }}",
@@ -23,7 +23,7 @@
         "copyrightHolder" : "{{ range .Site.Author }}{{ . }}{{ end }}",
         "copyrightYear" : "{{ .Date.Format "2006" }}",
         "url" : "{{ .Permalink }}",
-        "wordCount" : "{{ .WordCount }}"
+        "wordCount" : "{{ .WordCount }}",
     }
     {{ end }}
     {
