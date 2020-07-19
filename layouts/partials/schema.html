@@ -1,24 +1,36 @@
 <script type="application/ld+json">
-    {
-        "@context" : "http://schema.org",
-        "@type" : "BlogPosting",
-        "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": "{{ .Site.BaseURL }}"
-        },
-        "name" : "{{ .Title }}",
-        "headline" : "{{ .Title }}",
-        "description" : "{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}",
-        "inLanguage" : "{{ .Lang }}",
-        "author" : "{{ range .Site.Author }}{{ . }}{{ end }}",
-        "creator" : "{{ range .Site.Author }}{{ . }}{{ end }}",
-        "publisher": "{{ range .Site.Author }}{{ . }}{{ end }}",
-        "accountablePerson" : "{{ range .Site.Author }}{{ . }}{{ end }}",
-        "copyrightHolder" : "{{ range .Site.Author }}{{ . }}{{ end }}",
-        "copyrightYear" : "{{ .Date.Format "2006" }}",
-        "datePublished": "{{ .Date | safeHTML }}",
-        "dateModified" : "{{ .Date | safeHTML }}",
-        "url" : "{{ .Permalink }}",
-        "wordCount" : "{{ .WordCount }}",
+{{ if eq .Section "posts" }}
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": {{ .Title }},
+  "image": {{ .Params.featuredImage | absURL }},
+  "datePublished": {{ .PublishDate }},
+  "dateModified": {{ .Lastmod }},
+  "author": {
+    "@type": "Person",
+    "name": {{ .Site.Params.author }}
+  },
+  "mainEntityOfPage": { "@type": "WebPage" },
+   "publisher": {
+    "@type": "Organization",
+    "name": {{ .Site.Params.header }},
+    "logo": {
+      "@type": "ImageObject",
+      "url": {{ .Site.Params.logo }}
     }
+  },
+  "description": {{ .Summary | plainify | safeHTML }}
+}
+{{ end }}
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": {{ .Site.Params.header }},
+  "url": {{ .Site.BaseURL }},
+  "sameAs": [
+    "https://twitter.com/{{ .Site.Params.twitter }}",
+    "https://github.com/{{ .Site.Params.github }}"
+  ]
+}
 </script>
