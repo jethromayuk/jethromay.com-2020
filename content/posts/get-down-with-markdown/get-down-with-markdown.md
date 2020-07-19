@@ -9,7 +9,7 @@ Most developers will encounter Markdown files at some stage of their careers, vi
 
 Markdown files are extremely powerful because it allows the creator the ability to easily construct beautiful and semantic markup without having to build it with code. They are often used inside git repositories as documentation but have also grown to be extremely popular on blogging platforms. I personally store my posts on [GitHub](https://github.com/jethromay/) which [Hugo](https://gohugo.io/) then turns into semantic HTML.
 
-In this tutorial I will cover some basic syntax used inside Markdown files which will allow you to start creating beautifully structured content.
+In this tutorial, I will cover some basic syntax used inside Markdown files which will allow you to start creating beautifully structured content.
 
 ## Headings:
 
@@ -146,13 +146,13 @@ Much like links a title can also be added to an image by adding the following:
 
 ## Block Quotes:
 
-A blockquote can be created by adding a right facing chevron `>` in front of a paragraph.
+A blockquote can be created by adding a right-facing chevron `>` in front of a paragraph.
 
     > I am a blockquote
     
 Using this syntax will render the following:
 
-> I am a block quote
+> I am a blockquote
 
 ## Code:
 
