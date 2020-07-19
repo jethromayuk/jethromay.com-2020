@@ -28,10 +28,6 @@ ol {
     @apply list-decimal list-inside
 }
 
-ol + ol {
-    @apply list-outside
-}
-
 article .content a {
     @apply text-blue-700
 }
