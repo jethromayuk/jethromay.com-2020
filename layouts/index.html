@@ -1,6 +1,6 @@
 {{ define "main" }}
-    <div class="intro flex items-center xs:mb-12 lg:pt-20 lg:pb-10">
-        <div class="flex items-ce flex-grow flex-col xs:mr-0 md:mr-4">
+    <div class="intro flex items-center justify-between xs:mb-12 lg:pt-20 lg:pb-10">
+        <div class="flex flex-grow flex-col xs:mr-0 md:mr-4">
             <h1 class="font-bold text-6xl xs:text-4xl sm:text-5xl">Hey, I'm Jethro.</h1>
             <p class="mt-0 mb-4">I'm a full-stack web developer &amp; writer, currently living and working in South Africa.</p>
             <div class="flex justify-start items-center text-gray-500">
@@ -10,7 +10,7 @@
                     Follow @may_Jethro</a>
             </div>
         </div>
-        <img class="flex rounded-lg shadow-lg max-w-sm xs:hidden" src="/img/me.jpg" alt="Jethro May.">
+        <img class="intro-image flex rounded-lg shadow-lg max-w-xs xs:hidden" src="/img/me.jpg" alt="Jethro May.">
     </div>
     <section class="xs:mb-12 mt-8 mb-10" id="posts">
         {{ range first 5 (where $.Site.RegularPages "Section" "posts") }}

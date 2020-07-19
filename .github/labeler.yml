@@ -1,0 +1,19 @@
+# Add 'repo' label to any root file changes
+repo:
+  - ./*
+
+# Add 'static' label to any change to static files
+static:
+- any: ['static/**/*']
+
+# Add 'functions' label to any change to static files
+functions:
+- any: ['functions/**/*']
+
+# Add 'layouts` label to any change to layout files
+layouts:
+- any: ['layouts/**/*']
+
+# Add 'content` label to any change to layout files
+content:
+- any: ['content/**/*']

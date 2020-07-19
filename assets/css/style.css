@@ -109,6 +109,10 @@ button[disabled] {
     @apply mb-4
 }
 
+.intro > div {
+    max-width: 380px;
+}
+
 @tailwind utilities;
 
 @media screen and (min-width: 320px) and (max-width: 1023px) {
@@ -120,5 +124,23 @@ button[disabled] {
 @media screen and (min-width: 1280px) {
     .container {
         max-width: 960px;
+    }
+}
+
+/* iPhone 6, 7, & 8 in portrait & landscape */
+@media only screen
+and (min-device-width : 375px)
+and (max-device-width : 667px) {
+    .intro-image {
+        @apply hidden
+    }
+}
+
+/* iPhone 6, 7, & 8 Plus in portrait & landscape */
+@media only screen
+and (min-device-width : 414px)
+and (max-device-width : 736px) {
+    .intro-image {
+        @apply hidden
     }
 }
