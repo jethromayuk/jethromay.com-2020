@@ -146,9 +146,9 @@ Much like links a title can also be added to an image by adding the following:
 
 ## Block Quotes:
 
-A block quote can be created by adding a right facing chevron `>` in front of a paragraph.
+A blockquote can be created by adding a right facing chevron `>` in front of a paragraph.
 
-    > I am a block quote
+    > I am a blockquote
     
 Using this syntax will render the following:
 
