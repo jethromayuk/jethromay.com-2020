@@ -47,10 +47,6 @@ As we go further into this tutorial, you will find that there are many ways to a
 
 `**Bold text**` will render **Bold text** 
 
-Or by using a double underscore on either side of the word or phrase:
-
-`__Bold text__` will render __Bold text__
-
 ## Italic text:
 
 The syntax for italic text is similar to that of bold text. A single asterisk or underscore will be used on either side of the text or phrase.
@@ -58,12 +54,6 @@ The syntax for italic text is similar to that of bold text. A single asterisk or
 `*Italic text*` will render: *Italic text* 
 
 `_Italic text_` will render: _Italic text_ 
-
-## Underlined text:
-
-To underline text is as simple as adding a double underscore on either side of the word or phrase:
-
-`__Underlined text__` will render: __Underlined text__.
 
 ## Lists:
 
