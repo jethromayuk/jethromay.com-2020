@@ -47,6 +47,8 @@ As we go further into this tutorial, you will find that there are many ways to a
 
 `**Bold text**` will render **Bold text** 
 
+`__Bold text__` will render __Bold text__ 
+
 ## Italic text:
 
 The syntax for italic text is similar to that of bold text. A single asterisk or underscore will be used on either side of the text or phrase.
