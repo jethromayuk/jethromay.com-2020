@@ -64,6 +64,41 @@
     </script>
 
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.3.5/dist/alpine.min.js" defer></script>
+    
+    <script type="application/ld+json">
+        {{ if eq .Section "posts" }}
+            {
+                "@context": "https://schema.org",
+                "@type": "BlogPosting",
+                "mainEntityOfPage": {
+                    "@type": "WebPage",
+                    "@id": "{{ .Site.BaseURL }}"
+               },
+               "name" : "{{ .Title }}",
+               "headline" : "{{ .Title }}",
+               "description" : "{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}",
+               "inLanguage" : "{{ .Lang }}",
+               "author" : "{{ range .Site.Author }}{{ . }}{{ end }}",
+               "creator" : "{{ range .Site.Author }}{{ . }}{{ end }}",
+               "publisher": "{{ range .Site.Author }}{{ . }}{{ end }}",
+               "accountablePerson" : "{{ range .Site.Author }}{{ . }}{{ end }}",
+               "copyrightHolder" : "{{ range .Site.Author }}{{ . }}{{ end }}",
+               "copyrightYear" : "{{ .Date.Format "2006" }}",
+               "datePublished": "{{ .Date | safeHTML }}",
+               "dateModified" : "{{ .Date | safeHTML }}",
+               "url" : "{{ .Permalink }}",
+               "wordCount" : "{{ .WordCount }}",
+            }
+        {{ else }}
+        {
+            "@context": "https://schema.org",
+            "@type": "Website",
+            "url": "{{ .Permalink }}",
+            "name": "{{ .Title }}",
+            "alternateName": "{{ .Title }}"
+        }
+        {{ end }}
+</script>
 </head>
 
 <body class="antialiased flex flex-col h-screen">
