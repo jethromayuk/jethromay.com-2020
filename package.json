@@ -6,7 +6,6 @@
     "postinstall": "netlify-lambda install"
   },
   "dependencies": {
-    "@tailwindcss/typography": "^0.2.0",
     "autoprefixer": "^9.8.5",
     "netlify-cli": "^2.58.0",
     "netlify-lambda": "^1.6.3",
@@ -17,7 +16,8 @@
   },
   "keywords": [
     "hugo",
-    "blog"
+    "blog",
+    "website"
   ],
   "author": "Jethro May <hello@jethromay.com>",
   "license": "MIT",
