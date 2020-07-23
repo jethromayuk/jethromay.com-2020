@@ -129,8 +129,16 @@ button[disabled] {
     }
 }
 
-@media screen and (min-width: 1280px) {
+@media (min-width: 1280px) {
     .container {
         max-width: 960px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    h2 {
+        font-size: 28px !important;
+        line-height: 1.375 !important;
     }
 }
