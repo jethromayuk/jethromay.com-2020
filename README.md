@@ -21,7 +21,7 @@ Feel free to submit a pull request if you notice anything that needs to be addre
 
 * [Jethro May](https://jethromay.com)
 
-[![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/K3K0Z32Y)
+[![Ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/K3K0Z32Y)
 
 ## License
 
