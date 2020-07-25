@@ -6,3 +6,9 @@ functions = "./functions"
 [build.environment]
 HUGO_VERSION = "0.74.2"
 HUGO_ENV = "production"
+
+[[plugins]]
+  package = "netlify-plugin-hugo-cache-resources"
+
+	[plugins.inputs]
+	debug = true
