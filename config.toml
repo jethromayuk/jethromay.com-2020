@@ -13,8 +13,8 @@ unsafe= true
     name = "Jethro May"
 
 [params]
-    title = "Full-stack web developer & writer."
-    description = "Jethro May is a full-stack web developer & writer with a passion for Laravel."
+    title = "Full-stack web developer."
+    description = "Jethro May is a full-stack web developer currently living and working in sunny South Africa."
 
 [sitemap]
     changefreq = "weekly"
