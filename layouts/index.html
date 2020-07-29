@@ -21,7 +21,7 @@
                 </a>
             </div>
         </div>
-        <img class="hidden lg:flex rounded-lg shadow-lg max-w-xs" src="/img/me.jpg" alt="Jethro May.">
+        <img class="lazyload hidden lg:flex rounded-lg shadow-lg max-w-xs" data-src="/img/me.jpg" alt="Jethro May">
     </div>
     <section class="xs:mb-12 mt-8 mb-10" id="posts">
         {{ range first 5 (where $.Site.RegularPages "Section" "posts") }}
