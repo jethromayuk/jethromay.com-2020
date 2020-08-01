@@ -545,7 +545,7 @@ button[disabled] {
     background-color: #ffffff;
     border: 1px solid #dce1e5;
     border-radius: 4px;
-    color: #373f45;
+    color: #1f1f1f;
     cursor: pointer;
     display: block;
     height: 36px;
