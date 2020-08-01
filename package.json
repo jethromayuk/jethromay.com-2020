@@ -6,7 +6,7 @@
     "postinstall": "netlify-lambda install"
   },
   "dependencies": {
-    "autoprefixer": "^9.8.5",
+    "autoprefixer": "^9.8.6",
     "netlify-cli": "^2.58.0",
     "netlify-lambda": "^1.6.3",
     "node-fetch": "^2.6.0",
