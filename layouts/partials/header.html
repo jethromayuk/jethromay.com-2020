@@ -1,34 +1,18 @@
-<header class="bg-white fixed top-0 z-50 w-full xs:border-b-2 xs:shadow-none sm:shadow-none sm:border-b-2 lg:border-0 lg:p-2"
+<header class="bg-white border-b-2 fixed shadow-none top-0 z-50 w-full lg:border-0 lg:p-2"
         x-data="{ open: false, top: false }"
         :class="{ 'md:shadow-none lg:shadow-none': !top, 'md:shadow-none lg:shadow': top }"
-        @scroll.window="top = (window.scrollY > 60)"
-        @keydown.window.escape="open = false"
-        @click.away="open = false">
-    <div class="w-full container mx-auto flex flex-wrap items-center mt-0 py-3 xs:px-4 sm:px-4 md:px-4 lg:px-4">
-        <div class="justify-between flex items-center xs:w-full sm:w-full md:w-full md:px-0 lg:px-0 lg:w-1/2">
+        @scroll.window="top = (window.scrollY > 60)">
+    <div class="flex flex-wrap items-center container mx-auto w-full mt-0 px-4 py-3">
+        <div class="flex items-center justify-between">
             <a href="/" class="flex font-bold text-lg no-underline hover:no-underline" title="Jethro May">
                 Jethro May
             </a>
-
-            <div class="flex lg:hidden">
-                <button @click="open = !open" x-bind:aria-label="open ? 'Close main menu' : 'Main menu'" x-bind:aria-expanded="open">
-                    <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24" x-state:on="Menu open" x-state:off="Menu closed" :class="{ 'hidden': open, 'block': !open }">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                    </svg>
-                    <svg class="h-6 w-6 hidden" stroke="currentColor" fill="none" viewBox="0 0 24 24" x-state:on="Menu open" x-state:off="Menu closed" :class="{ 'hidden': !open, 'block': open }">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-                    </svg>
-                </button>
-            </div>
         </div>
-        <nav class="w-full flex-grow lg:flex lg:items-center lg:w-1/2 mt-2 hidden lg:mt-0" x-state:on="Open" x-state:off="closed" :class="{ 'block': open, 'hidden': !open }"  aria-label="Main">
-            <ul class="flex-1 items-center py-2 md:px-0 lg:flex lg:justify-end lg:space-x-6" role="menubar">
-                <li class="lg:mr-3 lg:ml-3 lg:invisible pb-2">
-                    <a href="/" class="text-gray-600 hover:underline text-lg">Home</a>
-                </li>
+        <nav class="flex flex-grow" aria-label="Main">
+            <ul class="flex flex-1 justify-end space-x-6 lg:px-0" role="menubar">
                 {{ $current := . }}
                 {{ range .Site.Menus.main }}
-                    <li class="py-1 text-lg lg:py-2">
+                    <li class="text-base py-1 md:text-lg lg:py-2">
                         {{ $active := or ($current.IsMenuCurrent "main" .) ($current.HasMenuCurrent "main" .) }}
                         {{ $active = or $active (eq .Name $current.Title) }}
                         {{ $active = or $active (and (eq .Name "Posts") (eq $current.Section "posts")) }}
