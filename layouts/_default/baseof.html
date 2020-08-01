@@ -113,5 +113,6 @@
 {{ with resources.Get "js/lazysizes.js" | minify }}
 <script>{{ .Content | safeJS }}</script>
 {{ end }}
+<script src="https://f.convertkit.com/ckjs/ck.5.js"></script>
 </body>
 </html>
