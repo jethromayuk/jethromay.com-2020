@@ -12,7 +12,7 @@
             <ul class="flex flex-1 justify-end space-x-6 lg:px-0" role="menubar">
                 {{ $current := . }}
                 {{ range .Site.Menus.main }}
-                    <li class="text-base py-1 md:text-lg lg:py-2">
+                    <li class="text-base py-1 md:text-lg lg:py-2" role="menuitem">
                         {{ $active := or ($current.IsMenuCurrent "main" .) ($current.HasMenuCurrent "main" .) }}
                         {{ $active = or $active (eq .Name $current.Title) }}
                         {{ $active = or $active (and (eq .Name "Posts") (eq $current.Section "posts")) }}
