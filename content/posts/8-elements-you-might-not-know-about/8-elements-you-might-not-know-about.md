@@ -20,7 +20,9 @@ The `<abbr>` tag defines an abbreviation or an acronym, which also allows for an
   (<a href='https://codepen.io/jethro-may'>@jethro-may</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
-{{< figure src="abbreviation-tag.png" alt="Abbreviation tag" caption="Abbreviation tag" >}}
+```
+<p>This document can be styled with <abbr title="Cascading Style Sheets">CSS</abbr></p>
+```
 
 ## Cite:
 
@@ -31,7 +33,11 @@ The `<cite>` tag defines the reference to a cited creative work, and it must inc
   (<a href='https://codepen.io/jethro-may'>@jethro-may</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
-{{< figure src="cite-tag.png" alt="Cite tag" caption="Cite tag" >}}
+```
+<p>
+  <cite>Hey Jude</cite> by The Beatles was released in 1968.
+</p>
+```
 
 ## Details:
 
@@ -42,7 +48,11 @@ The `<details>` element creates a widget which can be opened or closed by the us
   (<a href='https://codepen.io/jethro-may'>@jethro-may</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
-{{< figure src="details-tag.png" alt="Details tag" caption="Details tag" >}}
+```
+<details>
+  This content is hidden.
+</details>
+```
 
 ## Mark:
 
@@ -53,7 +63,9 @@ The `<mark>` tag will define text which should be marked or highlighted by the b
   (<a href='https://codepen.io/jethro-may'>@jethro-may</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
-{{< figure src="mark-tag.png" alt="Mark tag" caption="Mark tag" >}}
+```
+<p>Sometimes you need to <mark>highlight</mark> text.</p>
+```
 
 ## Output:
 
@@ -64,7 +76,13 @@ The `<output>` tag specifies the result of a calculation.
   (<a href='https://codepen.io/jethro-may'>@jethro-may</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
-{{< figure src="output-tag.png" alt="Output tag" caption="Output tag" >}}
+```
+<form oninput="result.value=parseInt(number.value)+parseInt(range.value)">
+  <input type="range" id="range" name="range" value="50" /> +
+  <input type="number" id="number" name="number" value="50" /> =
+  <output name="result" for="number range">100</output>
+</form>
+```
 
 ## Summary:
 
@@ -75,7 +93,12 @@ The `<summary>` tag defines a heading for the `<details>` element. The `<summary
   (<a href='https://codepen.io/jethro-may'>@jethro-may</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
-{{< figure src="summary-tag.png" alt="Summary tag" caption="Summary tag" >}}
+```
+<details>
+  <summary>Details</summary>
+  This content is hidden.
+</details>
+```
 
 ## Time:
 
@@ -86,7 +109,9 @@ The `<time>` tag represents a time or date value. Optionally, you may include a 
   (<a href='https://codepen.io/jethro-may'>@jethro-may</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
-{{< figure src="time-tag.png" alt="Time tag" caption="Time tag" >}}
+```
+<p>This post was published on <time datetime="2020-08-03">3 August, 2020</time>.</p>
+```
 
 ## Word Break Opportunity:
 
@@ -97,4 +122,10 @@ The `<wbr>` tag tells the browser where the ideal location is to break text when
   (<a href='https://codepen.io/jethro-may'>@jethro-may</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
-{{< figure src="wbr-tag.png" alt="Word Break Opportunity tag" caption="Word Break Opportunity tag" >}}
+```
+<p>This is a very loooooooooo<wbr>oooo</wbr>oooooooooooong sentence showing us how to use this tag.</p>
+```
+
+## Conclusion
+
+In this article, we reviewed a variety of different HTML tags that you can use in your projects. There are many other useful HTML tags, all of which seek out to solve specific problems. I hope you have learnt a thing or two and will be able to use these tags in your projects!
