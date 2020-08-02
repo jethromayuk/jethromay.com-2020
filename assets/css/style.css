@@ -84,8 +84,12 @@ p > img {
     @apply border-b-2 pb-12 mb-6
 }
 
-#archive article:not(:only-child):not(:last-child) {
+#archive article {
     @apply border-b-2 pb-12 mb-10
+}
+
+#archive article:last-child {
+    @apply border-none pb-12 mb-10
 }
 
 button:disabled,
