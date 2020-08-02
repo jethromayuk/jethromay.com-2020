@@ -24,6 +24,8 @@ The `<abbr>` tag defines an abbreviation or an acronym, which also allows for an
 <p>This document can be styled with <abbr title="Cascading Style Sheets">CSS</abbr></p>
 ```
 
+The `<abbr>` tag has full browser support. View a detailed list of which browser versions this tag can be used in, [here](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/abbr#Browser_compatibility).
+
 ## Cite:
 
 The `<cite>` tag defines the reference to a cited creative work, and it must include the title of that work. 
@@ -38,6 +40,8 @@ The `<cite>` tag defines the reference to a cited creative work, and it must inc
   <cite>Hey Jude</cite> by The Beatles was released in 1968.
 </p>
 ```
+
+The `<cite>` tag has full browser support. View a detailed list of which browser versions this tag can be used in, [here](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/cite#Browser_compatibility).
 
 ## Details:
 
@@ -54,6 +58,8 @@ The `<details>` element creates a widget which can be opened or closed by the us
 </details>
 ```
 
+The `<details>` element is support in all browsers apart from Internet Explorer. View a detailed list of which browser versions this tag can be used in, [here](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details#Browser_compatibility).
+
 ## Mark:
 
 The `<mark>` tag will define text which should be marked or highlighted by the browser.
@@ -66,6 +72,8 @@ The `<mark>` tag will define text which should be marked or highlighted by the b
 ```
 <p>Sometimes you need to <mark>highlight</mark> text.</p>
 ```
+
+The `<mark>` tag has full browser support. View a detailed list of which browser versions this tag can be used in, [here](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/mark#Browser_compatibility).
 
 ## Output:
 
@@ -84,6 +92,8 @@ The `<output>` tag specifies the result of a calculation.
 </form>
 ```
 
+The `<output>` element is supported in all browsers apart from Internet Explorer. View a detailed list of which browser versions this tag can be used in, [here](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/output#Browser_compatibility).
+
 ## Summary:
 
 The `<summary>` tag defines a heading for the `<details>` element. The `<summary>` tag must be the first child element inside the `<details>` element.
@@ -100,6 +110,8 @@ The `<summary>` tag defines a heading for the `<details>` element. The `<summary
 </details>
 ```
 
+The `<summary>` tag is supported in all browsers apart from Internet Explorer. View a detailed list of which browser versions this tag can be used in, [here](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/summary#Browser_compatibility).
+
 ## Time:
 
 The `<time>` tag represents a time or date value. Optionally, you may include a 'datetime' attribute which will translate the value into a machine-readable format. Using the `<time>` tag allows for better search engine results.
@@ -113,6 +125,8 @@ The `<time>` tag represents a time or date value. Optionally, you may include a 
 <p>This post was published on <time datetime="2020-08-03">3 August, 2020</time>.</p>
 ```
 
+The `<time>` tag is supported in all browsers apart from Internet Explorer. View a detailed list of which browser versions this tag can be used in, [here](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/time#Browser_compatibility).
+
 ## Word Break Opportunity:
 
 The `<wbr>` tag tells the browser where the ideal location is to break text when the browser window size changes. 
@@ -125,6 +139,8 @@ The `<wbr>` tag tells the browser where the ideal location is to break text when
 ```
 <p>This is a very loooooooooo<wbr>oooo</wbr>oooooooooooong sentence showing us how to use this tag.</p>
 ```
+
+The `<wbr>` tag is supported in all browsers apart from Internet Explorer. View a detailed list of which browser versions this tag can be used in, [here](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/wbr#Browser_compatibility).
 
 ## Conclusion
 
