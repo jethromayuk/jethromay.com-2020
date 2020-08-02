@@ -1,5 +1,6 @@
 ---
 title: "8 HTML Elements You Might Not Know About"
+description: "In this guide, we will cover eight elements that you may not have heard of, or used before and look at examples of how you could use them in your next project."
 date: 2020-08-02T11:43:13+02:00
 slug: 8-elements-you-might-not-know-about
 ---
@@ -19,6 +20,8 @@ The `<abbr>` tag defines an abbreviation or an acronym, which also allows for an
   (<a href='https://codepen.io/jethro-may'>@jethro-may</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
+{{< figure src="abbreviation-tag.png" alt="Abbreviation tag" caption="Abbreviation tag" >}}
+
 ## Cite:
 
 The `<cite>` tag defines the reference to a cited creative work, and it must include the title of that work. 
@@ -27,6 +30,8 @@ The `<cite>` tag defines the reference to a cited creative work, and it must inc
   See the Pen <a href='https://codepen.io/jethro-may/pen/ZEQgPNG'>Cite Tag.</a> by Jethro May
   (<a href='https://codepen.io/jethro-may'>@jethro-may</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
+
+{{< figure src="cite-tag.png" alt="Cite tag" caption="Cite tag" >}}
 
 ## Details:
 
@@ -37,6 +42,8 @@ The `<details>` element creates a widget which can be opened or closed by the us
   (<a href='https://codepen.io/jethro-may'>@jethro-may</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
+{{< figure src="details-tag.png" alt="Details tag" caption="Details tag" >}}
+
 ## Mark:
 
 The `<mark>` tag will define text which should be marked or highlighted by the browser.
@@ -45,6 +52,8 @@ The `<mark>` tag will define text which should be marked or highlighted by the b
   See the Pen <a href='https://codepen.io/jethro-may/pen/GRoVeaG'>Mark Tag.</a> by Jethro May
   (<a href='https://codepen.io/jethro-may'>@jethro-may</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
+
+{{< figure src="mark-tag.png" alt="Mark tag" caption="Mark tag" >}}
 
 ## Output:
 
@@ -55,6 +64,8 @@ The `<output>` tag specifies the result of a calculation.
   (<a href='https://codepen.io/jethro-may'>@jethro-may</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
+{{< figure src="output-tag.png" alt="Output tag" caption="Output tag" >}}
+
 ## Summary:
 
 The `<summary>` tag defines a heading for the `<details>` element. The `<summary>` tag must be the first child element inside the `<details>` element.
@@ -63,6 +74,8 @@ The `<summary>` tag defines a heading for the `<details>` element. The `<summary
   See the Pen <a href='https://codepen.io/jethro-may/pen/qBbevzj'>Summary Tag.</a> by Jethro May
   (<a href='https://codepen.io/jethro-may'>@jethro-may</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
+
+{{< figure src="summary-tag.png" alt="Summary tag" caption="Summary tag" >}}
 
 ## Time:
 
@@ -73,6 +86,8 @@ The `<time>` tag represents a time or date value. Optionally, you may include a 
   (<a href='https://codepen.io/jethro-may'>@jethro-may</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
+{{< figure src="time-tag.png" alt="Time tag" caption="Time tag" >}}
+
 ## Word Break Opportunity:
 
 The `<wbr>` tag tells the browser where the ideal location is to break text when the browser window size changes. 
@@ -81,3 +96,5 @@ The `<wbr>` tag tells the browser where the ideal location is to break text when
   See the Pen <a href='https://codepen.io/jethro-may/pen/mdVNgbK'>WBR Tag.</a> by Jethro May
   (<a href='https://codepen.io/jethro-may'>@jethro-may</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
+
+{{< figure src="wbr-tag.png" alt="Word Break Opportunity tag" caption="Word Break Opportunity tag" >}}
