@@ -13,7 +13,7 @@ In this guide, we will cover eight elements that you may not have heard of, or u
 
 ## Abbreviation:
 
-The `<abbr>` tag defines an abbreviation or an acronym, which also allows for an optional title attribute to provide a full description of the abbreviation or acronym.
+The `<abbr>` tag defines text which is an abbreviation or an acronym, it also allows for an optional title attribute to provide a full description of the abbreviation or acronym.
 
 <iframe height="265" style="width: 100%;" scrolling="no" title="Abbreivation Tag." src="https://codepen.io/jethro-may/embed/MWKNxqg?height=265&theme-id=dark&default-tab=result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href='https://codepen.io/jethro-may/pen/MWKNxqg'>Abbreivation Tag.</a> by Jethro May
@@ -28,7 +28,7 @@ The `<abbr>` tag has full browser support. View a detailed list of which browser
 
 ## Cite:
 
-The `<cite>` tag defines the reference to a cited creative work, and it must include the title of that work. 
+The `<cite>` tag defines the reference to a cited creative work, and it must include the title of that work.  Examples of where this can be used include the title of a song, book, research paper, website or blog post etc.
 
 <iframe height="265" style="width: 100%;" scrolling="no" title="Cite Tag." src="https://codepen.io/jethro-may/embed/ZEQgPNG?height=265&theme-id=dark&default-tab=result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href='https://codepen.io/jethro-may/pen/ZEQgPNG'>Cite Tag.</a> by Jethro May
@@ -105,12 +105,12 @@ The `<summary>` tag defines a heading for the `<details>` element. The `<summary
 
 ```
 <details>
-  <summary>Details</summary>
+  <summary>Summary Heading</summary>
   This content is hidden.
 </details>
 ```
 
-The `<summary>` tag is supported in all browsers apart from Internet Explorer. View a detailed list of which browser versions this tag can be used in, [here](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/summary#Browser_compatibility).
+The `<summary>` tag is supported in all browsers apart from Internet Explorer. View a detailed list of which browser versions this tag can be used in, [here](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/summary#Browser_compatibility). 
 
 ## Time:
 
