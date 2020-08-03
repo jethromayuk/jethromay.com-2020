@@ -2,7 +2,7 @@
 title: "8 HTML Elements You Might Not Know About"
 description: "In this guide, we will cover eight elements that you may not have heard of, or used before and look at examples of how you could use them in your next project."
 date: 2020-08-02T11:43:13+02:00
-slug: 8-elements-you-might-not-know-about
+slug: 8-html-elements-you-might-not-know-about
 ---
 
 HTML which stands for "Hypertext Markup Language," is used to structure the content of a web page. It consists of a series of elements which enclose different parts of the page content to make them appear or act in a certain way.
