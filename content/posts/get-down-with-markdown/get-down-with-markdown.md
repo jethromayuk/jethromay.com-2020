@@ -176,6 +176,8 @@ Some Markdown applications or frameworks allow you to insert HTML tags into the 
 
     I am using regular **bold** syntax with an HTML link <a href="#" class="text-blue-100">Link</a> 
     
+## Conclusion:    
+
 As you can see Markdown is extremely powerful and user-friendly, it has many benefits and provides creators with an easy way to create beautifully structured content. It is a huge time saver and allows you to focus on what truly matters most, your content.
 
 
