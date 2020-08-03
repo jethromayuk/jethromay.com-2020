@@ -126,15 +126,15 @@ Using the above syntax is especially useful for email addresses:
 
 Images have a similar syntax to links, except they have an exclamation mark in front of the square brackets, followed by the alt text inside the square brackets and the path to the image in parentheses.
 
-    ![Alt text](/posts/get-down-with-markdown/image-1.jpg
+    ![Alt text](image-1.jpg
 
-![Alt text](/posts/get-down-with-markdown/image-1.jpg)
+![Alt text](image-1.jpg)
 
 Much like links a title can also be added to an image by adding the following:
 
-    ![I am the alt text](/posts/get-down-with-markdown/image-2.jpg "Image title") 
+    ![I am the alt text](image-2.jpg "Image title") 
 
-![I am the alt text](/posts/get-down-with-markdown/image-2.jpg "Image title")
+![I am the alt text](image-2.jpg "Image title")
 
 ## Block Quotes:
 
