@@ -97,6 +97,10 @@ button[disabled] {
     @apply opacity-50 cursor-not-allowed
 }
 
+iframe {
+    @apply mb-6
+}
+
 @tailwind components;
 
 .skip-link {
