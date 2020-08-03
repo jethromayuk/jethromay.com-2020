@@ -77,7 +77,7 @@ The `<mark>` tag has full browser support. View a detailed list of which browser
 
 ## Output:
 
-The `<output>` tag specifies the result of a calculation.
+The `<output>` tag specifies the result of a calculation. In the following example, you can select a value between 0 - 100 as well as enter a second number into the second element, outputting the sum of the two numbers.
 
 <iframe height="265" style="width: 100%;" scrolling="no" title="Output Tag." src="https://codepen.io/jethro-may/embed/rNxXbxM?height=265&theme-id=dark&default-tab=result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href='https://codepen.io/jethro-may/pen/rNxXbxM'>Output Tag.</a> by Jethro May
