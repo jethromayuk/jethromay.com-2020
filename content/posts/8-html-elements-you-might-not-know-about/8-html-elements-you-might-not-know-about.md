@@ -58,7 +58,7 @@ The `<details>` element creates a widget which can be opened or closed by the us
 </details>
 ```
 
-The `<details>` element is support in all browsers apart from Internet Explorer. View a detailed list of which browser versions this tag can be used in, [here](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details#Browser_compatibility).
+The `<details>` element is supported in all browsers apart from Internet Explorer. View a detailed list of which browser versions this tag can be used in, [here](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details#Browser_compatibility).
 
 ## Mark:
 
