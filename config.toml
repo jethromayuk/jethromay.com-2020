@@ -14,7 +14,7 @@ unsafe= true
 
 [params]
     title = "Full-stack web developer."
-    description = "Jethro May is a full-stack web developer currently living and working in sunny South Africa."
+    description = "Jethro May is a full-stack PHP web developer currently living and working in sunny South Africa."
 
 [sitemap]
     changefreq = "weekly"
