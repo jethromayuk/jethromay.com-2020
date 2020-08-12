@@ -24,7 +24,7 @@
         <img class="lazyload hidden lg:flex rounded-lg shadow-lg max-w-xs" data-src="/img/me.jpg" alt="Jethro May">
     </div>
     <section class="xs:mb-12 mt-8 mb-10" id="posts">
-        {{ range first 5 (where $.Site.RegularPages "Section" "posts") }}
+        {{ range first 3 (where $.Site.RegularPages "Section" "posts") }}
             <article>
                 <header class="mb-4">
                     <div class="flex items-center">
