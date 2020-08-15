@@ -4,7 +4,7 @@
   "description": "My personal website built with Hugo and Tailwind.",
   "dependencies": {
     "autoprefixer": "^9.8.6",
-    "netlify-cli": "^2.58.0",
+    "netlify-cli": "^2.59.1",
     "postcss": "^7.0.31",
     "postcss-cli": "^7.1.1",
     "tailwindcss": "^1.6.0"
