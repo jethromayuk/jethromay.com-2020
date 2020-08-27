@@ -13,7 +13,7 @@ unsafe= true
     name = "Jethro May"
 
 [params]
-    title = "Full-stack PHP developer"
+    title = "Full-Stack PHP Developer"
     description = "Jethro May is a full-stack PHP developer currently living and working in South Africa."
 
 [sitemap]
