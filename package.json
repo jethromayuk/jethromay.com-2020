@@ -4,10 +4,10 @@
   "description": "My personal website built with Hugo and Tailwind.",
   "dependencies": {
     "autoprefixer": "^9.8.6",
-    "netlify-cli": "^2.61.0",
+    "netlify-cli": "^2.61.2",
     "postcss": "^7.0.31",
     "postcss-cli": "^7.1.2",
-    "tailwindcss": "^1.7.6"
+    "tailwindcss": "^1.8.5"
   },
   "keywords": [
     "hugo",
