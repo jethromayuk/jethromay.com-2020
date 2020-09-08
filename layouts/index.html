@@ -1,5 +1,5 @@
 {{ define "main" }}
-    <div class="intro flex items-center justify-between xs:mb-12 lg:pt-20 lg:pb-10">
+    <section class="intro flex items-center justify-between xs:mb-12 lg:pt-20 lg:pb-10">
         <div class="flex flex-grow flex-col xs:mr-0">
             <h1 class="font-bold text-6xl mb-0 xs:text-4xl sm:text-5xl">Hey, I'm Jethro.</h1>
             <p class="mt-0 mb-4">I am a full-stack PHP developer currently living and working in South Africa.</p>
@@ -22,7 +22,8 @@
             </div>
         </div>
         <img class="lazyload hidden lg:flex rounded-lg shadow-lg max-w-xs" data-src="/img/me.jpg" alt="Jethro May">
-    </div>
+    </section>
+
     <section class="xs:mb-12 mt-8 mb-10" id="posts">
         {{ range first 3 (where $.Site.RegularPages "Section" "posts") }}
             <article>
@@ -45,5 +46,6 @@
             </article>
         {{ end }}
     </section>
+
     {{ partial "newsletter.html" . }}
 {{ end }}
