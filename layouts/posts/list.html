@@ -1,25 +1,28 @@
 {{ define "main" }}
-    <section class="md:mt-20" id="archive">
-        <h1 class="xs:text-4xl">{{ .Title }}</h1>
-        {{ $paginator := .Paginate (where .Pages "Type" "posts") }}
-        {{ range $paginator.Pages }}
-        <article>
-            <header class="mb-4">
-                <h2 class="text-3xl mb-0 mr-3">
-                    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-                </h2>
-                <p class="text-sm text-gray-600 mb-6 mt-1">
-                    <time>{{ .Date.Format "January 2, 2006" }}</time> &bull; {{ math.Round (div (countwords .Content) 220.0) }} min read
+    <article itemscope="itemscope" itemtype="http://schema.org/Article">
+        <section class="md:mt-20" id="archive" itemprop="articleSection">
+            <h1 class="xs:text-4xl">{{ .Title }}</h1>
+            {{ $paginator := .Paginate (where .Pages "Type" "posts") }}
+            {{ range $paginator.Pages }}
+            <article>
+                <header class="mb-4">
+                    <h2 class="text-3xl mb-0 mr-3">
+                        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                    </h2>
+                    <p class="text-sm text-gray-600 mb-6 mt-1">
+                        <time>{{ .Date.Format "January 2, 2006" }}</time> &bull; {{ math.Round (div (countwords .Content) 220.0) }} min read
+                    </p>
+                </header>
+                <p>
+                    {{ .Description }}
                 </p>
-            </header>
-            <p>
-                {{ .Description }}
-            </p>
-            <footer>
-                <a class="text-lg underline text-blue-700" href="{{ .RelPermalink }}">Read more</a>
-            </footer>
-        </article>
-        {{ end }}
-    </section>
+                <footer>
+                    <a class="text-lg underline text-blue-700" href="{{ .RelPermalink }}">Read more</a>
+                </footer>
+            </article>
+            {{ end }}
+        </section>
+    </article>
+
     {{ template "_internal/pagination.html" . }}
 {{ end }}
