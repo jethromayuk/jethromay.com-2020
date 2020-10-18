@@ -98,7 +98,7 @@ git add index.html
 git commit -m "Initial commit"
 ```
 
-The first command will add the index.html file to your commit, and the second command will commit your file with a message. The '-m' option indicates what your commit message is, followed by the actual message. If you have a lot of changes, you can omit the 'git add' step and run the following command:
+The first command will add the `index.html` file to your commit, and the second command will commit your file with a message. The '-m' option indicates what your commit message is, followed by the actual message. If you have a lot of changes, you can omit the 'git add' step and run the following command:
 
 ```
 git commit -a -m "Initial commit"
