@@ -65,7 +65,7 @@ gh repo clone <repository> <directory>
 
 Replace <repository> with the full URL to your GitHub repository and replace <directory> with the name of the folder you would like to store this code. (Don't include the left/right chevron symbols.)
 
-Alternatively, if you run the command inside a folder that you have already created you can omit the directory and instead use a period:
+Alternatively, if you run the command inside a folder that you have already created you can omit the directory and instead use a period. This will clone the repository into your current folder::
 
 ```
 gh repo clone <repository> .
