@@ -21,14 +21,14 @@
         <header>
             <h1 class="font-bold leading-tight xs:text-3xl text-5xl mb-0">{{ .Title }}</h1>
             <p class="text-sm text-gray-600 mb-6 mr-2">
-                <time>{{ .Date.Format "January 2, 2006" }}</time> &bull; {{ math.Round (div (countwords .Content) 220.0) }} min read &bull; <a href="http://twitter.com/share?text={{ .Title }} via @may_jethro&url={{ .Permalink }}" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235'); return false;">Share</a>
+                <time>{{ .Date.Format "January 2, 2006" }}</time> &bull; {{ math.Round (div (countwords .Content) 220.0) }} min read &bull; <a href="http://twitter.com/share?text={{ .Title }} via @jethromay91&url={{ .Permalink }}" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235'); return false;">Share</a>
             </p>
         </header>
         <div class="content">
             {{ .Content }}
         </div>
         <footer class="mt-6">
-            <a class="text-lg underline text-blue-700" href="http://twitter.com/share?text={{ .Title }} via @may_jethro&url={{ .Permalink }}" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235'); return false;">Share on Twitter</a>
+            <a class="text-lg underline text-blue-700" href="http://twitter.com/share?text={{ .Title }} via @jethromay91&url={{ .Permalink }}" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235'); return false;">Share on Twitter</a>
         </footer>
     </article>
     {{ partial "newsletter.html" . }}
