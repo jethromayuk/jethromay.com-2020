@@ -85,5 +85,3 @@ Overall, 2020 was a good year for me, full of many personal and work-related acc
 3. Improve my fitness.
 4. Write more.
 5. Release a product and gain at least ten paying customers.
-
-What are your goals for 2021 and beyond?
