@@ -1,5 +1,5 @@
 ---
-title: "2020 in Review"
+title: "2020 In Review"
 description: "2020 has been a tough year for everyone, personally it has been one filled with many accomplishments and I am looking forward to 2021."
 date: 2021-01-02T10:39:03+02:00
 slug: 2020-in-review
