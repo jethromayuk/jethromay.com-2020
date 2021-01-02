@@ -5,7 +5,7 @@ date: 2021-01-02T10:39:03+02:00
 slug: 2020-in-review
 ---
 
-2020 has been a year to forget for many people around the world. There has been many ups and downs in everyone's lives. I will be reflecting on the year and what I achieved.
+2020 has been a year to forget for many people around the world. There have been many ups and downs in everyone's lives. I will be reflecting on the year and what I achieved.
 
 At the start of the year, up until June/July, I worked on personal projects and upskilled myself on various topics. I then started to feel quite a bit of burnout.
 
