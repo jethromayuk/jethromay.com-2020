@@ -7,7 +7,7 @@ slug: 2020-in-review
 
 2020 has been a year to forget for many people around the world. There have been many ups and downs in everyone's lives. I will be reflecting on the year and what I achieved.
 
-At the start of the year, up until June/July, I worked on personal projects and upskilled myself on various topics. I then started to feel quite a bit of burnout.
+At the start of the year, up until June/July, I worked on many personal projects and upskilled myself on various topics. I then started to feel quite a bit of burnout.
 
 I hadn't taken a real break in over a year.
 
@@ -38,7 +38,7 @@ Let's go through each of them, keeping in mind these are in no particular order.
 
 At the start of 2020, I wanted to redesign my website. I wanted to add a blog to my website as well as add a refreshed design. Seeing as I had already started tinkering with Go, I decided to give Hugo a try. I tweaked the design throughout 2020, adding small improvements to the overall design and functionality.
 
-I achieved this goal, and I will most likely redesign the website at some point this year. I may even switch to a different framework entirely.
+I achieved this goal, and I will most likely redesign the website at some point this year. I may even switch to a different language or framework entirely.
 
 ### Start blogging
 
@@ -51,11 +51,10 @@ I didn't write nearly enough articles in 2020 but I achieved this goal and wrote
 5. [Getting Started With Version Control](https://jethromay.com/posts/getting-started-with-version-control/)
 
 I have begun plotting out a few ideas for 2021's articles, which I will likely be starting once I return from my much-needed break.
-Move into a bigger home.
 
 ### Move into a bigger home
 
-My fiance and I, (now wife) wanted to move into a bigger house. While we were comfortable in our previous home, we wanted more space and a little more privacy. We achieved that goal towards the end of 2020, moving into our current home.
+My fiance and I, (now wife) wanted to move into a bigger home. While we were comfortable in our previous home, we wanted more space and a little more privacy. We achieved that goal towards the end of 2020, moving into our current home.
 
 ### Secure a job overseas
 
