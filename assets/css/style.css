@@ -134,6 +134,10 @@ iframe {
     max-width: 380px;
 }
 
+.utterances {
+    @apply max-w-full
+}
+
 @tailwind utilities;
 
 @media (min-width: 320px) {
