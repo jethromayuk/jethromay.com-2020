@@ -10,6 +10,7 @@ While my project is open source, I encourage you not to copy or reuse the code i
 
 * [Hugo](https://gohugo.io/) 
 * [Tailwind](https://tailwindcss.com/)
+* [Comments Powered By Utterances](https://utteranc.es/)
 
 My old website built with Next.js can be found [here](https://github.com/jethromay/jethromay.com-old).
 
