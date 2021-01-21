@@ -2,15 +2,14 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT) [![Netlify Status](https://api.netlify.com/api/v1/badges/767fd780-1a8a-4545-ab27-4f611acadd7b/deploy-status)](https://app.netlify.com/sites/naughty-visvesvaraya-5e60f3/deploys)
 
-My personal website built with Hugo & Tailwind. 
+My personal website built with Hugo & Tailwind.
 
-While my project is open source, I encourage you not to copy or reuse the code in this repository. 
+While my project is open source, I encourage you not to copy or reuse the code in this repository.
 
 ## Built With
 
-* [Hugo](https://gohugo.io/) 
+* [Hugo](https://gohugo.io/)
 * [Tailwind](https://tailwindcss.com/)
-* [Comments Powered By Utterances](https://utteranc.es/)
 
 My old website built with Next.js can be found [here](https://github.com/jethromay/jethromay.com-old).
 
@@ -27,4 +26,3 @@ Feel free to submit a pull request if you notice anything that needs to be addre
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
-
