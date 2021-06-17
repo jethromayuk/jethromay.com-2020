@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>Operational Coverage</name>
+	<description>This is our Armed Response Area of Coverage</description>
+	<Style id="line-000000-1200-nodesc-normal">
+		<LineStyle>
+			<color>ff000000</color>
+			<width>1.2</width>
+		</LineStyle>
+		<BalloonStyle>
+			<text><![CDATA[<h3>$[name]</h3>]]></text>
+		</BalloonStyle>
+	</Style>
+	<StyleMap id="line-000000-1200-nodesc">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#line-000000-1200-nodesc-normal</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#line-000000-1200-nodesc-highlight</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="poly-006064-1200-77-nodesc-highlight">
+		<LineStyle>
+			<color>ff646000</color>
+			<width>1.8</width>
+		</LineStyle>
+		<PolyStyle>
+			<color>4d646000</color>
+		</PolyStyle>
+		<BalloonStyle>
+			<text><![CDATA[<h3>$[name]</h3>]]></text>
+		</BalloonStyle>
+	</Style>
+	<Style id="poly-006064-1200-77-nodesc-normal">
+		<LineStyle>
+			<color>ff646000</color>
+			<width>1.2</width>
+		</LineStyle>
+		<PolyStyle>
+			<color>4d646000</color>
+		</PolyStyle>
+		<BalloonStyle>
+			<text><![CDATA[<h3>$[name]</h3>]]></text>
+		</BalloonStyle>
+	</Style>
+	<StyleMap id="poly-006064-1200-77-nodesc">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#poly-006064-1200-77-nodesc-normal</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#poly-006064-1200-77-nodesc-highlight</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="poly-1A237E-1200-77-nodesc-highlight">
+		<LineStyle>
+			<color>ff7e231a</color>
+			<width>1.8</width>
+		</LineStyle>
+		<PolyStyle>
+			<color>4d7e231a</color>
+		</PolyStyle>
+		<BalloonStyle>
+			<text><![CDATA[<h3>$[name]</h3>]]></text>
+		</BalloonStyle>
+	</Style>
+	<Style id="poly-1A237E-1200-77-nodesc-normal">
+		<LineStyle>
+			<color>ff7e231a</color>
+			<width>1.2</width>
+		</LineStyle>
+		<PolyStyle>
+			<color>4d7e231a</color>
+		</PolyStyle>
+		<BalloonStyle>
+			<text><![CDATA[<h3>$[name]</h3>]]></text>
+		</BalloonStyle>
+	</Style>
+	<Style id="line-000000-1200-nodesc-highlight">
+		<LineStyle>
+			<color>ff000000</color>
+			<width>1.8</width>
+		</LineStyle>
+		<BalloonStyle>
+			<text><![CDATA[<h3>$[name]</h3>]]></text>
+		</BalloonStyle>
+	</Style>
+	<StyleMap id="poly-1A237E-1200-77-nodesc">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#poly-1A237E-1200-77-nodesc-normal</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#poly-1A237E-1200-77-nodesc-highlight</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Folder id="0456F77B6D1B44170474">
+		<name>Our Footprints</name>
+		<Placemark id="07A343A1411B4EE5A03C">
+			<name>Umdloti</name>
+			<styleUrl>#poly-1A237E-1200-77-nodesc</styleUrl>
+			<Polygon>
+				<outerBoundaryIs>
+					<LinearRing>
+						<tessellate>1</tessellate>
+						<coordinates>
+							31.108525,-29.6811075,0 31.1122588,-29.6834567,0 31.1142698,-29.6786777,0 31.1162806,-29.6738987,0 31.118757,-29.66971,0 31.1222629,-29.6655215,0 31.1238441,-29.660593,0 31.1257683,-29.656112,0 31.1267985,-29.6531285,0 31.1240517,-29.6514129,0 31.1214771,-29.6590953,0 31.1191596,-29.6641298,0 31.1159837,-29.6649876,0 31.1149656,-29.6681026,0 31.1156642,-29.6697261,0 31.1132846,-29.6720781,0 31.108525,-29.6811075,0
+						</coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark id="08171A50FB1B4EE5A03F">
+			<name>Morningside</name>
+			<styleUrl>#poly-1A237E-1200-77-nodesc</styleUrl>
+			<Polygon>
+				<outerBoundaryIs>
+					<LinearRing>
+						<tessellate>1</tessellate>
+						<coordinates>
+							31.010321,-29.8135604,0 31.0088337,-29.8170028,0 31.0082008,-29.8181152,0 31.00685440000001,-29.8173123,0 31.0042071,-29.8171529,0 31.0027185,-29.8182222,0 31.0025468,-29.8207307,0 31.0028901,-29.82168709999999,0 31.0014309,-29.8222026,0 31.001109,-29.8235587,0 30.9996713,-29.8271671,0 31.0038554,-29.8274744,0 31.0056257,-29.8285774,0 31.0093647,-29.830953,0 31.0096892,-29.8291067,0 31.0106991,-29.828593,0 31.0106789,-29.8273347,0 31.0135974,-29.8287496,0 31.019713,-29.8251382,0 31.0242406,-29.8222713,0 31.0271479,-29.8225133,0 31.0269306,-29.8250496,0 31.0280236,-29.825536,0 31.0290308,-29.8220385,0 31.0277378,-29.8174682,0 31.0261504,-29.8166762,0 31.0236188,-29.8144692,0 31.0214951,-29.8160416,0 31.0219353,-29.8135138,0 31.01834149999999,-29.8128478,0 31.0145673,-29.8135765,0 31.010321,-29.8135604,0
+						</coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark id="18686A7C961B4EE5A03F">
+			<name>Durban North Footprint</name>
+			<styleUrl>#poly-1A237E-1200-77-nodesc</styleUrl>
+			<Polygon>
+				<outerBoundaryIs>
+					<LinearRing>
+						<tessellate>1</tessellate>
+						<coordinates>
+							31.0246683,-29.7517747,0 31.0120093,-29.7605675,0 31.0052499,-29.7652987,0 30.9992193,-29.7699924,0 30.9982752,-29.7741273,0 30.9959577,-29.7887284,0 30.9899067,-29.7969591,0 30.9852719,-29.8003108,0 30.9833406,-29.801428,0 31.0027997,-29.8101999,0 31.01025660000001,-29.8128715,0 31.01767630000001,-29.809962,0 31.031085,-29.8101079,0 31.0420063,-29.8127112,0 31.0449674,-29.8012046,0 31.0675839,-29.7605673,0 31.1006717,-29.7043333,0 31.0908871,-29.6984061,0 31.0820893,-29.6927396,0 31.0761683,-29.6957216,0 31.0718347,-29.6991507,0 31.0594299,-29.7221497,0 31.0574558,-29.7268083,0 31.055868,-29.7312058,0 31.0535076,-29.7346715,0 31.0433366,-29.7420497,0 31.0345818,-29.748086,0 31.029196,-29.7495206,0 31.0246683,-29.7517747,0
+						</coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+	</Folder>
+	<Folder id="199675B2BE1B44170474">
+		<name>North Coast</name>
+		<Placemark>
+			<name>North Coast</name>
+			<styleUrl>#poly-006064-1200-77-nodesc</styleUrl>
+			<Polygon>
+				<outerBoundaryIs>
+					<LinearRing>
+						<tessellate>1</tessellate>
+						<coordinates>
+							31.1935608,-29.5280675,0 31.196629,-29.5326975,0 31.1955882,-29.5384477,0 31.1920581,-29.5438244,0 31.1831747,-29.5539416,0 31.1820588,-29.5576652,0 31.1831746,-29.5622101,0 31.1866081,-29.571075,0 31.203631,-29.5544624,0 31.2111962,-29.5489178,0 31.2167807,-29.5450253,0 31.2224292,-29.5383695,0 31.2286423,-29.522051,0 31.2351969,-29.5093171,0 31.2469241,-29.4939707,0 31.23973549999999,-29.4867244,0 31.2358838,-29.4846324,0 31.2318178,-29.4826525,0 31.2260465,-29.4815128,0 31.2138255,-29.4979614,0 31.1993176,-29.5172337,0 31.1935608,-29.5280675,0
+						</coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+	</Folder>
+	<Folder id="234EEF24641B44170474">
+		<name>Untitled layer</name>
+	</Folder>
+	<Folder id="3EE948BCD01B44170474">
+		<name>Untitled layer</name>
+		<Placemark>
+			<name>Line 1</name>
+			<styleUrl>#line-000000-1200-nodesc</styleUrl>
+			<LineString>
+				<tessellate>1</tessellate>
+				<coordinates>
+					31.0156244,-29.8323197,0 31.0351938,-29.8233845,0
+				</coordinates>
+			</LineString>
+		</Placemark>
+	</Folder>
+</Document>
+</kml>
